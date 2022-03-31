@@ -2,6 +2,9 @@ import { Link } from 'react-router-dom'
 import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import AuthContext from '../../context/AuthContext'
+import HomeIcon from '@mui/icons-material/Home';
+import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
+import HotelIcon from '@mui/icons-material/Hotel';
 
 const NavBar = () => {
     const [auth, setAuth] = useContext(AuthContext)
@@ -13,19 +16,26 @@ const NavBar = () => {
     return (
         <div className='navbar'>
             <div className="navbar__left">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/768px-LinkedIn_logo_initials.png" alt="" />
+                <img src="" alt="" />
             </div>
             
             <div className="navbar__right">
-            <li>
-                <Link to={'/'}>Home</Link>
+            <li className='navbar__link'>
+                <Link to={'/home'}>
+                
+                <HomeIcon />
+                Home
+                </Link>
             </li>
-            <li>
-                <Link to={'/admin'}>Admin</Link>
+            <li className='navbar__link'><Link to={'/admin'}>
+                <AdminPanelSettingsIcon />
+                Admin
+                </Link>
             </li>
-            <li>
+            <li className='navbar__link'>
+                
                 {!auth ? (
-                    <Link to={'/login'}>Login</Link>
+                    <Link to={'/login'}><HotelIcon />Login</Link>
                 ) : (
                     <button onClick={handleLogout}>Logout</button>
                 )}

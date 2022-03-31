@@ -8,18 +8,44 @@
     background-color: variables.$primaryColor;
     justify-content: space-evenly;
     padding: 10px 0 10px 0;
-}
 
-.navbar__left {
-    display: flex;
-}
 
-.navbar__left img {
-    object-fit: contain;
-    height: 40px;
-    margin-right: 10px;
-}
+    &__right {
+        text-decoration: none;
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+    }
 
-.header__right {
-    display: flex;
+    a {
+        color: variables.$white;
+        text-decoration: none;
+        margin-right: 20px;
+    
+        
+        
+        &:hover {
+            color: #cecece;
+        }
+
+        &:active {
+            border-bottom: 1px solid white;
+        }
+    }
+
+    .navbar__left {
+        display: flex;
+    }
+
+    .navbar__left img {
+        object-fit: contain;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    .header__right {
+        display: flex;
+        
+    }
 }
