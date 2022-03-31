@@ -11,7 +11,12 @@ const NavBar = () => {
         navigate('/login')
     }
     return (
-        <ul>
+        <div className='navbar'>
+            <div className="navbar__left">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/768px-LinkedIn_logo_initials.png" alt="" />
+            </div>
+            
+            <div className="navbar__right">
             <li>
                 <Link to={'/'}>Home</Link>
             </li>
@@ -25,7 +30,8 @@ const NavBar = () => {
                     <button onClick={handleLogout}>Logout</button>
                 )}
             </li>
-        </ul>
+            </div>
+        </div>
     )
 }
 

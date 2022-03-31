@@ -1,0 +1,25 @@
+@use "variables";
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    background-color: variables.$primaryColor;
+    justify-content: space-evenly;
+    padding: 10px 0 10px 0;
+}
+
+.navbar__left {
+    display: flex;
+}
+
+.navbar__left img {
+    object-fit: contain;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.header__right {
+    display: flex;
+}
