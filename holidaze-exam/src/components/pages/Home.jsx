@@ -1,7 +1,12 @@
+import frontpic from '../../images/frontpic2.jpg'
+
 const Home = () => {
-    return <>
-    <h1>HOME</h1>
-    </>
+    return (
+        <div className="home">
+            <img className="home__frontpic" src={frontpic} alt="Holidaze"></img>
+            <h1>uefhn</h1>
+        </div>
+   )
 }
 
 export default Home

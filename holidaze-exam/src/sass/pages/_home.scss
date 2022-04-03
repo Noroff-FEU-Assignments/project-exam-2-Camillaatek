@@ -1,0 +1,11 @@
+// @use "variables";
+// @use "mixin";
+
+.home {
+
+    .home__frontpic{
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+    }
+}
