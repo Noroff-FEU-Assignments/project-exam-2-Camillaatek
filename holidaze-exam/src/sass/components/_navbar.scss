@@ -1,4 +1,4 @@
-// @use "variables";
+@use "variables";
 
 // .navbar {
   
@@ -60,86 +60,171 @@
 
 
 
-.menu {
-    background-color: blue;
-    padding: 1.5rem;
-    position: fixed;
-    width: 100%;
-    border: none;
-    margin: 0;
-    z-index: 1;
-    &__flex{
-        display: flex;
-        justify-content: space-evenly;
-    }
-    &__flexx{
-        display: flex;
-        justify-content: flex-start;
-    }
+// .menu {
+//     background-color: blue;
+//     padding: 1.5rem;
+//     position: fixed;
+//     width: 100%;
+//     border: none;
+//     margin: 0;
+//     z-index: 1;
+//     &__flex{
+//         display: flex;
+//         justify-content: space-evenly;
+//     }
+//     &__flexx{
+//         display: flex;
+//         justify-content: flex-start;
+//     }
+//     &__logo {
+//         width: 150px;
+//     }
+
+//     &__toggle {
+//         color: white;
+//         font-size: 30px;
+//         padding-top: 0.1rem;
+//         cursor: pointer;
+//     }
+
+//     &__open {
+//         height: 100vh;
+//     }
+
+//     &__nav {
+//         transition: all 2sec ease-out;
+//         padding-bottom: 4rem;
+//         align-items: flex-start;
+//         padding-top: 2rem;
+//         display: flex;
+//         flex-direction: column;
+//     }
+
+//     &__link {
+//         color: white;
+//         border-bottom: 2px solid white;
+//         margin: 1rem 0;
+//         font-weight: Bold;
+//         text-decoration: none;
+//         cursor: pointer;
+
+//         &:hover {
+//             color: white;
+//             padding-left: 2rem;
+//             font-weight: Bold;
+//             transition: all 0.1s ease-in;
+//         }
+//     }
+
+//     p {
+//         color: white;
+//         text-align: center;
+//         margin-top: 4rem;
+//     }
+
+//     &__s-link {
+//         padding: 1rem;
+//     }
+
+//     &__social {
+//         font-size: 50px;
+//         color: white;
+//     }
+// }
+
+// @media screen and (min-width: 700px) {
+//     .menu {
+//         &__nav {
+//             display: flex;
+//             flex-direction: row;
+//         }
+//         &__toggle {
+//             display: none;
+//         }
+//     }
+// }
+
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 75px;
+    background-color: variables.$primaryColor;
+    color: white;
+
+
     &__logo {
-        width: 150px;
-    }
-
-    &__toggle {
-        color: white;
         font-size: 30px;
-        padding-top: 0.1rem;
-        cursor: pointer;
+        color: blue;
     }
 
-    &__open {
-        height: 100vh;
-    }
-
-    &__nav {
-        transition: all 2sec ease-out;
-        padding-bottom: 4rem;
-        align-items: flex-start;
-        padding-top: 2rem;
+    &__nav-links{
         display: flex;
-        flex-direction: column;
+        justify-content: flex-end;
+        list-style: none;
+        width: 75%;
+    
     }
 
-    &__link {
-        color: white;
-        border-bottom: 2px solid white;
-        margin: 1rem 0;
-        font-weight: Bold;
+    &__nav-links li {
         text-decoration: none;
-        cursor: pointer;
-
-        &:hover {
-            color: white;
-            padding-left: 2rem;
-            font-weight: Bold;
-            transition: all 0.1s ease-in;
-        }
-    }
-
-    p {
         color: white;
-        text-align: center;
-        margin-top: 4rem;
+        font-size: 20px;
+        padding: 10px 20px;
+        margin: 0 10px;
+            :hover {
+                color: rgb(204, 204, 204);
+            }
     }
 
-    &__s-link {
-        padding: 1rem;
-    }
-
-    &__social {
-        font-size: 50px;
-        color: white;
+    &__mobile-menu-icon {
+        display: none;
     }
 }
 
-@media screen and (min-width: 700px) {
-    .menu {
-        &__nav {
+@media screen and (max-width: 780px) {
+    .navbar{
+        &__logo {
             display: flex;
-            flex-direction: row;
+            position: absolute;
+            top: 15px;
+            left: 35px;
         }
-        &__toggle {
+
+        &__nav-links {
             display: none;
+        }
+
+        &__nav-links-mobile {
+            position: absolute;
+            display: block;
+            list-style: none;
+            background-color: variables.$primaryColor;
+            left: 0;
+            top: 75px;
+            transition: all 0.5s ease-out;
+            width: 100%;
+        }
+
+        &__nav-links li {
+            color: white;
+            text-align: center;
+            padding: 32px;
+            width: 100%;
+            transition: all 0.5s ease;
+        }
+
+        &__mobile-menu-icon {
+            display: block;
+            position: absolute;
+            font-size: 30px;
+            color: white;
+            background-color: aqua;
+            border: none;
+            outline: none;
+            top: 15px;
+            right: 25px;
         }
     }
 }

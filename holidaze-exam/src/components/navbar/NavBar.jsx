@@ -9,90 +9,155 @@ import HotelIcon from '@mui/icons-material/Hotel';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
-const Menu = () => {
 
-    const [menuClosed, setMenu] = useState("false");
-    const [auth, setAuth] = useContext(AuthContext);
+const NavBar = () => {
+    const [auth, setAuth] = useContext(AuthContext)
+    const [isMobile, setIsMobile] = useState(false)
 
-
-
-    function logout() {
-        setAuth(null);
-        
+    const navigate = useNavigate()
+    const handleLogout = () => {
+        setAuth(null)
+        navigate('/login')
     }
-
-    const handleToggle = () => {
-        setMenu(!menuClosed);
-    };
-
     return (
-        <>
-            <nav className="menu">
-                <div className="menu__flex flex--space">
-                    <Link to="/">
-                        <img className="menu__logo" src={logo} alt="Holidaze"></img>
-                    </Link>
-                    <div className="menu__flexx flex--start">
-                        {auth ? <button className="button--simple" onClick={logout}>Log out</button> : ''}
-                        {
-                            menuClosed ?
-                                <HomeIcon
-                                    onClick={handleToggle} className="menu__toggle">
-                                </HomeIcon>
-                                :
-                                <CloseIcon
-                                    onClick={handleToggle}
-                                    className="menu__toggle">
-                                </CloseIcon>
-                        }
-                    </div>
+        // <nav className='navbar'>
+        //     <h3 className='logo'>logog</h3>
+        //     <ul className='nav-links'>
+        //         <Link to={'/'} className="home">
+        //             <li>Home</li>
+        //         </Link>
+        //         <Link to={'/'} className="home">
+        //             <li>Home</li>
+        //         </Link>
 
-                </div>
-                { !menuClosed ? 
-                    <div className="menu__open">
-                    <div className="menu__nav">
-                            <Link onClick={handleToggle} className="menu__link" to='/'>
-                            Home
-                        </Link>
-                            <Link onClick={handleToggle} className="menu__link" to='/accommodation'>
-                            All accommodation
-                        </Link>
-                            <Link onClick={handleToggle} className="menu__link" to='/contact'>
-                            Contact us
-                        </Link>
-                            {auth ? 
-                            <>
-                            <Link onClick={handleToggle} className="menu__link" to='/panel'>
-                                    Admin panel
-                            </Link>
-                            <div className="menu__link" onClick={() => {
-                                logout();
-                                handleToggle();
-                            }}>Log out</div> 
-                            </>
-                            :
-                            <Link onClick={handleToggle} className="menu__link" to='/login'>
-                                    Log in
-                            </Link>
-                            }
-                        
-                    </div>
-                  
-                    
-                </div>
-                    :
-                    ''
-                }
-
-            </nav>
-
-        </>
+        //     </ul>
+        // </nav>
+        <nav className='navbar'>
+            <h3 className='navbar__logo'>logog</h3>
+            <ul className={isMobile ? 'navbar__nav-links-mobile' : 'navbar__nav-links'}
+            onClick={() => setIsMobile(false)}
+            >
+            <li>
+                <Link to={'/'}>Home</Link>
+            </li>
+            <li>
+                <Link to={'/'}>Admin</Link>
+            </li>
+            <li>
+                {!auth ? (
+                    <Link to={'/login'}>Login</Link>
+                ) : (
+                    <button className='loginBtn' onClick={handleLogout}>
+                        Logout
+                    </button>
+                )}
+            </li>
+        </ul>
+        <button className='navbar__mobile-menu-icon'
+        onClick={() => setIsMobile(!isMobile)}>
+            {isMobile ? (<i className="fas fa-times"></i>
+            ) : ( <i className="fas fa-bars"></i>)}
+        </button>
+        </nav>
     )
-
-
 }
 
-export default Menu;
+export default NavBar
+
+
+
+
+
+
+
+
+
+
+
+// const Menu = () => {
+
+//     const [menuClosed, setMenu] = useState("false");
+//     const [auth, setAuth] = useContext(AuthContext);
+
+
+
+//     function logout() {
+//         setAuth(null);
+        
+//     }
+
+//     const handleToggle = () => {
+//         setMenu(!menuClosed);
+//     };
+
+//     return (
+//         <>
+//             <nav className="menu">
+//                 <div className="menu__flex flex--space">
+//                     <Link to="/">
+//                         <img className="menu__logo" src={logo} alt="Holidaze"></img>
+//                     </Link>
+//                     <div className="menu__flexx flex--start">
+//                         {auth ? <button className="button--simple" onClick={logout}>Log out</button> : ''}
+//                         {
+//                             menuClosed ?
+//                                 <HomeIcon
+//                                     onClick={handleToggle} className="menu__toggle">
+//                                 </HomeIcon>
+//                                 :
+//                                 <CloseIcon
+//                                     onClick={handleToggle}
+//                                     className="menu__toggle">
+//                                 </CloseIcon>
+//                         }
+//                     </div>
+
+//                 </div>
+//                 { !menuClosed ? 
+//                     <div className="menu__open">
+//                     <div className="menu__nav">
+//                             <Link onClick={handleToggle} className="menu__link" to='/'>
+//                             Home
+//                         </Link>
+//                             <Link onClick={handleToggle} className="menu__link" to='/accommodation'>
+//                             All accommodation
+//                         </Link>
+//                             <Link onClick={handleToggle} className="menu__link" to='/contact'>
+//                             Contact us
+//                         </Link>
+//                             {auth ? 
+//                             <>
+//                             <Link onClick={handleToggle} className="menu__link" to='/panel'>
+//                                     Admin panel
+//                             </Link>
+//                             <div className="menu__link" onClick={() => {
+//                                 logout();
+//                                 handleToggle();
+//                             }}>Log out</div> 
+//                             </>
+//                             :
+//                             <Link onClick={handleToggle} className="menu__link" to='/login'>
+//                                     Log in
+//                             </Link>
+//                             }
+                        
+//                     </div>
+                  
+                    
+//                 </div>
+//                     :
+//                     ''
+//                 }
+
+//             </nav>
+
+//         </>
+//     )
+
+
+// }
+
+// export default Menu;
 
 
 
