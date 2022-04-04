@@ -30,14 +30,14 @@ const NavBar = () => {
             onClick={() => setIsMobile(false)}
             >
             <li>
-                <Link to={'/'} className='navbar__li'>Home</Link>
+                <Link to={'/'} className='navbar__li'><HomeIcon />Home</Link>
             </li>
             <li>
-                <Link to={'/'} className='navbar__li'>Admin</Link>
+                <Link to={'/'} className='navbar__li'><AdminPanelSettingsIcon />Admin</Link>
             </li>
             <li>
                 {!auth ? (
-                    <Link to={'/login'} className='navbar__li'>Login</Link>
+                    <Link to={'/login'} className='navbar__li'><HotelIcon />Login</Link>
                 ) : (
                     <button className='navbar__primaryBtn' onClick={handleLogout}>
                         Logout

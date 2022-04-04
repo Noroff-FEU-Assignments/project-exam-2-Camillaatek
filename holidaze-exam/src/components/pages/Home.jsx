@@ -1,4 +1,4 @@
-import frontpic from '../../images/frontpic2.jpg'
+import frontpic from '../../images/frontpic3.jpg'
 
 const Home = () => {
     return (
