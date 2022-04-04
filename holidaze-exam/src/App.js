@@ -5,6 +5,7 @@ import Details from "./components/pages/Details";
 import Admin from "./components/pages/admin/Admin";
 import './sass/main.scss'
 import NavBar from "./components/navbar/NavBar";
+import Login from "./components/pages/Login";
 
 
 
@@ -15,8 +16,9 @@ function App() {
     <NavBar />
     <Routes>
       <Route index element={<Home />} />
-      <Route path='login' element={<Admin />} />
-      <Route path=':id' element={<Details />} />
+      <Route path='/admin' element={<Admin />} />
+      <Route path='/login' element={<Login />} />
+      <Route path='/:id' element={<Details />} />
     </Routes>
   </Router>
   </>
