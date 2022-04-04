@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap");
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 75px;
+  background-color: #1E195B;
+  color: white;
+  font-family: "PT Sans Caption", sans-serif;
+}
+
+.navbar__logo {
+  font-size: 30px;
+  color: blue;
+}
+
+.navbar__nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  list-style: none;
+  width: 75%;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar__li {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 0 10px;
+}
+
+.navbar__li :hover {
+  color: #cccccc;
+}
+
+.navbar__mobile-menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 780px) {
+  .navbar__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 15px;
+    left: 35px;
+  }
+  .navbar__nav-links {
+    display: none;
+  }
+  .navbar__nav-links-mobile {
+    position: absolute;
+    display: block;
+    list-style: none;
+    background-color: #1E195B;
+    left: 0;
+    top: 75px;
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    width: 100%;
+  }
+  .navbar__mobile-menu-icon {
+    display: block;
+    position: absolute;
+    font-size: 30px;
+    color: white;
+    background-color: #1E195B;
+    border: none;
+    outline: none;
+    top: 15px;
+    right: 25px;
+  }
+  .navbar li {
+    color: white;
+    text-align: center;
+    padding: 32px;
+    width: 100%;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+form h4 {
+  margin: none;
+  padding: 0 0 5px 0;
+  color: #5142F5;
+  font-family: "PT Sans Caption", sans-serif;
+  font-weight: 400;
+}
+
+form input {
+  background-color: rgba(196, 196, 196, 0.31);
+  border: none;
+  height: 23px;
+  padding: 5px 10px 5px 10px;
+  width: 260px;
+}
+
+form span {
+  color: red;
+}
+
+form .sendBtn {
+  background-color: #5142F5;
+  color: white;
+  border: none;
+  width: 280px;
+  padding: 8px 8px;
+  font-family: "PT Sans Caption", sans-serif;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.home {
+  margin: 20px;
+}
+
+.home .home__frontpic {
+  width: 100%;
+  height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+
+.login {
+  width: 280px;
+  margin: auto;
+  padding: 25px 0 0 0;
+}
+
+.login h1 {
+  font-family: "Rowdies", cursive;
+  color: #5142F5;
+  font-weight: 700;
+}
+
+.login p {
+  font-family: "PT Sans Caption", sans-serif;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 4px 0 30px 0;
+}
+
+.login .pass {
+  margin-top: 17px;
+}
+/*# sourceMappingURL=main.css.map */

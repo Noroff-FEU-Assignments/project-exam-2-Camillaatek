@@ -6,6 +6,7 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import axios from 'axios'
 import AuthContext from '../context/AuthContext'
 import { AUTH_URL } from '../utils/Api'
+import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 
 const LoginForm = () => {
     const navigate = useNavigate()
@@ -36,15 +37,17 @@ const LoginForm = () => {
   return (
     <>
     <form onSubmit={handleSubmit(onSubmit)}>
-        <input {...register('email')} placeholder='Your email' />
-        {errors.email && <span>{errors.email.message}</span>}
+        <h4>Name/Email</h4>
+        <input {...register('email')} placeholder='Your email..' />
+        {errors.email && <span>{errors.email.message}<ErrorOutlineIcon style={{ color: "red"}}/></span>}
+        <h4 className='pass'>Password</h4>
         <input
         {...register('password')}
         type='password'
-        placeholder='Your password...'
+        placeholder='Your password..'
         />
-        {errors.password && <span>{errors.password.message}</span>}
-        <button>Send</button>
+        {errors.password && <span>{errors.password.message}<ErrorOutlineIcon style={{ color: "red"}}/></span>}
+        <button className='sendBtn'>Log In</button>
     </form>
     </>
   )

@@ -1,0 +1,32 @@
+form {
+    h4 {
+        margin: none;
+        padding: 0 0 5px 0;
+        color: $secondaryColor;
+        font-family: $secondaryFont;
+        font-weight: 400;
+    }
+    input {
+        background-color: $inputGrey;
+        border: none;
+        height: 23px;
+        padding: 5px 10px 5px 10px;
+        width: 260px;
+    }
+
+    span {
+        color: $warning;
+    }
+
+    .sendBtn {
+       background-color: $secondaryColor;
+       color: white;
+       border: none;
+       width: 280px;
+       padding: 8px 8px;
+       font-family: $secondaryFont;
+       border-radius: 5px;
+       font-weight: bold;
+      margin-top: 30px;
+    }
+}

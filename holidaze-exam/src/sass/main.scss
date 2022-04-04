@@ -1,10 +1,13 @@
 //variables
+@import './variables';
 
 //components
 @import './components/navbar';
-@import './components/default';
-@import './components/variables';
+@import './default';
 @import './components/mixin';
+@import './components/loginForm';
+@import './components/error';
 
 //pages
 @import './pages/home';
+@import './pages/login';

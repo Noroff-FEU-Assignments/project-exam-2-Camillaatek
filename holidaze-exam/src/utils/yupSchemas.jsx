@@ -1,5 +1,6 @@
 import * as yup from 'yup'
 
+
 export const userLoginSchema = yup.object().shape({
     email: yup
     .string()
@@ -11,7 +12,5 @@ export const userLoginSchema = yup.object().shape({
 export const bookingSchema = yup.object().shape({
     title: yup.string().required('Please enter a title'),
     message: yup.string().required('Please provide a message'),
-    contact: yup
-    .string()
-    .required('Please provide an email so we can contact you'),
+    contact: yup.string().required('Please provide an email so we can contact you'),
 })
