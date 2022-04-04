@@ -130,6 +130,15 @@ form .sendBtn {
   margin-top: 30px;
 }
 
+@media screen and (min-width: 768px) {
+  form input {
+    width: 315px;
+  }
+  form .sendBtn {
+    width: 335px;
+  }
+}
+
 .home {
   margin: 20px;
 }
@@ -163,5 +172,17 @@ form .sendBtn {
 
 .login .pass {
   margin-top: 17px;
+}
+
+.login__image {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .login {
+    padding: 70px 0;
+    margin: auto;
+    width: 335px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

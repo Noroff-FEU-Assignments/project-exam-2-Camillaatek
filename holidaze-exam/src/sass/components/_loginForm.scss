@@ -30,3 +30,16 @@ form {
       margin-top: 30px;
     }
 }
+
+@media screen and (min-width: 768px) {
+    form {
+      
+        input {
+            width: 315px;
+        }
+
+        .sendBtn {
+            width: 335px;
+        }
+    }
+}
