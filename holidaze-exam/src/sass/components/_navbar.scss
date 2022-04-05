@@ -40,13 +40,13 @@
         display: none;
     }
 
-    &__primaryBtn {
-        color: white;
-        border: none;
-        background-color: $secondaryColor;
-        padding: 10px 15px;
-        border-radius: 5px;
+    &__loginBtn {
+     @include loginOutBtn;
     }
+
+    &__logoutBtn {
+        @include loginOutBtn;
+       }
 }
 
 @media screen and (max-width: 780px) {

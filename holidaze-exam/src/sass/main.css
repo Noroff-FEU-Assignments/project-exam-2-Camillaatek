@@ -49,12 +49,24 @@
   display: none;
 }
 
-.navbar__primaryBtn {
+.navbar__loginBtn {
   color: white;
   border: none;
   background-color: #5142F5;
   padding: 10px 15px;
   border-radius: 5px;
+  cursor: pointer;
+  font-family: "PT Sans Caption", sans-serif;
+}
+
+.navbar__logoutBtn {
+  color: white;
+  border: none;
+  background-color: #5142F5;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "PT Sans Caption", sans-serif;
 }
 
 @media screen and (max-width: 780px) {

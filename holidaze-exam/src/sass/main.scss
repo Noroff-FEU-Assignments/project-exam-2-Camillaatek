@@ -1,10 +1,10 @@
 //variables
 @import './variables';
+@import './mixin';
 
 //components
 @import './components/navbar';
 @import './default';
-@import './components/mixin';
 @import './components/loginForm';
 @import './components/error';
 @import './components/footer';

@@ -37,9 +37,11 @@ const NavBar = () => {
             </li>
             <li>
                 {!auth ? (
-                    <Link to={'/login'} className='navbar__li'><HotelIcon />Login</Link>
+                    <Link to={'/login'} className='navbar__li'>
+                        <button className='navbar__loginBtn'>
+                        Login</button></Link>
                 ) : (
-                    <button className='navbar__primaryBtn' onClick={handleLogout}>
+                    <button className='navbar__logoutBtn' onClick={handleLogout}>
                         Log Out
                     </button>
                 )}
