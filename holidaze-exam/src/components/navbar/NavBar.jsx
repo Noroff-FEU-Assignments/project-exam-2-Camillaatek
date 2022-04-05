@@ -40,7 +40,7 @@ const NavBar = () => {
                     <Link to={'/login'} className='navbar__li'><HotelIcon />Login</Link>
                 ) : (
                     <button className='navbar__primaryBtn' onClick={handleLogout}>
-                        Logout
+                        Log Out
                     </button>
                 )}
             </li>

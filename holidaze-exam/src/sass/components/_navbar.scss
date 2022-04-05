@@ -40,9 +40,13 @@
         display: none;
     }
 
-    // &__primaryBtn {
-    //     @include mixin.primaryBtn;
-    // }
+    &__primaryBtn {
+        color: white;
+        border: none;
+        background-color: $secondaryColor;
+        padding: 10px 15px;
+        border-radius: 5px;
+    }
 }
 
 @media screen and (max-width: 780px) {

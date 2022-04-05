@@ -49,6 +49,14 @@
   display: none;
 }
 
+.navbar__primaryBtn {
+  color: white;
+  border: none;
+  background-color: #5142F5;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
 @media screen and (max-width: 780px) {
   .navbar__logo {
     display: -webkit-box;

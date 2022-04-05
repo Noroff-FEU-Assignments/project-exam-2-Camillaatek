@@ -7,12 +7,14 @@ import './sass/main.scss'
 import NavBar from "./components/navbar/NavBar";
 import Login from "./components/pages/Login";
 import Footer from "./components/Footer";
+import { AuthProvider } from "./context/AuthContext";
 
 
 
 function App() {
   return (
   <>
+  <AuthProvider>
   <Router>
     <NavBar />
     <Routes>
@@ -23,6 +25,7 @@ function App() {
     </Routes>
     <Footer />
   </Router>
+  </AuthProvider>
   </>
   );
 }
