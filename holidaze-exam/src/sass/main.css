@@ -128,6 +128,7 @@ form .sendBtn {
   border-radius: 5px;
   font-weight: bold;
   margin-top: 30px;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
@@ -137,6 +138,18 @@ form .sendBtn {
   form .sendBtn {
     width: 335px;
   }
+}
+
+.footer {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #1E195B;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  color: white;
+  font-family: "PT Sans Caption", sans-serif;
 }
 
 .home {

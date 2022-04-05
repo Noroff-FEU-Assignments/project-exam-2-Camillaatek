@@ -6,6 +6,7 @@ import Admin from "./components/pages/admin/Admin";
 import './sass/main.scss'
 import NavBar from "./components/navbar/NavBar";
 import Login from "./components/pages/Login";
+import Footer from "./components/Footer";
 
 
 
@@ -20,6 +21,7 @@ function App() {
       <Route path='/login' element={<Login />} />
       <Route path='/:id' element={<Details />} />
     </Routes>
+    <Footer />
   </Router>
   </>
   );
