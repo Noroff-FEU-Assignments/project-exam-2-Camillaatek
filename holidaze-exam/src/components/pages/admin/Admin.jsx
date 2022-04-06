@@ -1,6 +1,6 @@
 const Admin = () => {
     return <>
-    <h1>Admin PAGOES</h1>
+    <h1>Admin PAGE</h1>
     </>
 }
 
