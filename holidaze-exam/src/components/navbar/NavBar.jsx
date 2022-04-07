@@ -29,12 +29,17 @@ const NavBar = () => {
             <ul className={isMobile ? 'navbar__nav-links-mobile' : 'navbar__nav-links'}
             onClick={() => setIsMobile(false)}
             >
+                {auth ? (<li>
+                <Link to={'/'} className='navbar__li'><AdminPanelSettingsIcon />Admin</Link>
+            </li>) :null}
+            
             <li>
                 <Link to={'/'} className='navbar__li'><HomeIcon />Home</Link>
             </li>
             <li>
-                <Link to={'/'} className='navbar__li'><AdminPanelSettingsIcon />Admin</Link>
+                <Link to={'/'} className='navbar__li'><HotelIcon />Accomendations</Link>
             </li>
+            
             <li>
                 {!auth ? (
                     <Link to={'/login'} className='navbar__li'>
