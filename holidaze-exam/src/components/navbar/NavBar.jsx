@@ -30,14 +30,14 @@ const NavBar = () => {
             onClick={() => setIsMobile(false)}
             >
                 {auth ? (<li>
-                <Link to={'/'} className='navbar__li'><AdminPanelSettingsIcon />Admin</Link>
+                <Link to={'/admin'} className='navbar__li'><AdminPanelSettingsIcon />Admin</Link>
             </li>) :null}
             
             <li>
                 <Link to={'/'} className='navbar__li'><HomeIcon />Home</Link>
             </li>
             <li>
-                <Link to={'/'} className='navbar__li'><HotelIcon />Accomendations</Link>
+                <Link to={'/accommodations'} className='navbar__li'><HotelIcon />Accommodations</Link>
             </li>
             
             <li>

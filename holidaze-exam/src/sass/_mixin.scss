@@ -7,3 +7,25 @@
         cursor: pointer;
         font-family: $secondaryFont;
 }
+
+@mixin longBtnPrimary {
+        color: white;
+        border: none;
+        background-color: $secondaryColor;
+        padding: 5px;
+        width: 150px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: $secondaryFont;
+}
+
+@mixin longBtnSecondary {
+        color: white;
+        border: none;
+        background-color: $tertiaryColor;
+        padding: 5px;
+        width: 150px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: $secondaryFont;
+}
