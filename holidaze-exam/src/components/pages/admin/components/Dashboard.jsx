@@ -4,10 +4,12 @@ import { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import AuthContext from '../../../../context/AuthContext'
 import HomeIcon from '@mui/icons-material/Home';
-import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 import HotelIcon from '@mui/icons-material/Hotel';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import MessageIcon from '@mui/icons-material/Message';
+import PermContactCalendar from '@mui/icons-material/PermContactCalendar'
+import { Avatar } from '@mui/material'
 
 
 const Dashboard = () => {
@@ -33,11 +35,11 @@ const Dashboard = () => {
                         <button className='dashboard__newentryBtn'>
                         Add New Entry</button></Link>
             <li>
-                <Link to={'/messages'} className='dashboard__li'><HotelIcon />Messages</Link>
+                <Link to={'/messages'} className='dashboard__li'><MessageIcon />Messages</Link>
             </li>
             
             <li>
-                <Link to={'/enquiries'} className='dashboard__li'><HotelIcon />Enquiries</Link>
+                <Link to={'/enquiries'} className='dashboard__li'><PermContactCalendar />Enquiries</Link>
             </li>
             <li>
                 <Link to={'/allhotels'} className='dashboard__li'><HotelIcon />Hotels</Link>
@@ -58,6 +60,8 @@ const Dashboard = () => {
                 )}
             </li>
         </ul>
+
+        <Avatar />
         <button className='dashboard__mobile-menu-icon'
         onClick={() => setIsMobile(!isMobile)}>
             {isMobile ? (<CloseIcon />

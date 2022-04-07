@@ -3,10 +3,11 @@ import Dashboard from '../components/Dashboard'
 
 const Messages = () => {
   return (
-      <>
+      <div className="messages">
       <Dashboard />
-    <div>Messages</div>
-    </>
+    <div>Message</div>
+    <h1>eigweiognweigwengiewngnnnnnnnnnnnnnnnnnnnnnnnnn</h1>
+    </div>
   )
 }
 
