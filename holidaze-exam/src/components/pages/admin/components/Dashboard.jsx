@@ -47,7 +47,7 @@ const Dashboard = () => {
             <li>
                 <Link to={'/'} className='dashboard__li'><HomeIcon />Back to website</Link>
             </li>
-            
+            <Avatar />
             <li>
                 {!auth ? (
                     <Link to={'/login'} className='dashboard__li'>
@@ -61,7 +61,7 @@ const Dashboard = () => {
             </li>
         </ul>
 
-        <Avatar />
+        
         <button className='dashboard__mobile-menu-icon'
         onClick={() => setIsMobile(!isMobile)}>
             {isMobile ? (<CloseIcon />
