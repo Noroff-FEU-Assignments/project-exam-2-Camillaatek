@@ -28,6 +28,7 @@ const Dashboard = () => {
                     <img className="dashboard__menulogo" src={logo} alt="Holidaze"></img>
                 </Link>
             </h3>
+            
             <ul className={isMobile ? 'dashboard__nav-links-mobile' : 'dashboard__nav-links'}
             onClick={() => setIsMobile(false)}
             >
