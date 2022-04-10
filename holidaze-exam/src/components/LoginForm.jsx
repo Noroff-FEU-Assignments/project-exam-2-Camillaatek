@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { userLoginSchema } from '../utils/yupSchemas'
 import { useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
@@ -11,6 +11,7 @@ import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 const LoginForm = () => {
     const navigate = useNavigate()
     const [auth, setAuth] = useContext(AuthContext)
+    const [isLoading, setIsLoading] = useState(true)
 
     const {
         register,

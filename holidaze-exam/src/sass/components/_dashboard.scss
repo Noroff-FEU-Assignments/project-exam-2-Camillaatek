@@ -11,7 +11,9 @@
     padding: 2rem 0;
     gap: 2rem;
     
-
+    svg {
+        padding-right: 15px;
+    }
     a{
        text-decoration: none;
          color: white;
@@ -21,7 +23,7 @@
         text-decoration: none;
         font-family: $secondaryFont;
         font-size: 15px;
-        margin-top: 20px;
+        margin-top: 30px;
         list-style-type: none;
         &:active {
             background-color: grey;
@@ -34,9 +36,11 @@
     }
     &__logoutBtn {
         @include longBtnSecondary;
+        margin-top: 10px
     }
     &__newentryBtn {
         @include longBtnPrimary;
+        margin-bottom: 20px;
     }
 }
 
