@@ -191,6 +191,10 @@ form .sendBtn {
   gap: 2rem;
 }
 
+.dashboard svg {
+  padding-right: 15px;
+}
+
 .dashboard a {
   text-decoration: none;
   color: white;
@@ -200,7 +204,7 @@ form .sendBtn {
   text-decoration: none;
   font-family: "PT Sans Caption", sans-serif;
   font-size: 15px;
-  margin-top: 20px;
+  margin-top: 30px;
   list-style-type: none;
 }
 
@@ -222,6 +226,7 @@ form .sendBtn {
   border-radius: 5px;
   cursor: pointer;
   font-family: "PT Sans Caption", sans-serif;
+  margin-top: 10px;
 }
 
 .dashboard__newentryBtn {
@@ -233,6 +238,7 @@ form .sendBtn {
   border-radius: 5px;
   cursor: pointer;
   font-family: "PT Sans Caption", sans-serif;
+  margin-bottom: 20px;
 }
 
 @media screen and (max-width: 780px) {
@@ -328,5 +334,12 @@ form .sendBtn {
     margin: auto;
     width: 335px;
   }
+}
+
+.hotel {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.1fr 1fr;
+      grid-template-columns: 0.1fr 1fr;
 }
 /*# sourceMappingURL=main.css.map */
