@@ -9,7 +9,7 @@ import Login from "./components/pages/Login";
 import Footer from "./components/Footer";
 import { AuthProvider } from "./context/AuthContext";
 import Accommodations from "./components/pages/Accommodations";
-import AllHotels from "./components/pages/admin/pages/AllHotels";
+import Booking from "./components/pages/admin/pages/Booking";
 import Enquiries from "./components/pages/admin/pages/Enquiries";
 import Messages from "./components/pages/admin/pages/Messages";
 
@@ -24,11 +24,11 @@ function App() {
       <Route index element={<Home />} />
       <Route path='/accommodations' element={<Accommodations />} />
       <Route path='/login' element={<Login />} />
-      <Route path='/:id' element={<Details />} />
+      <Route path='/booking/:id' element={<Booking />} />
       <Route path='/admin' element={<Admin />} />
-      <Route path='/allhotels' element={<AllHotels />} />
+      {/* <Route path='/allhotels' element={<AllHotels />} />
       <Route path='/enquiries' element={<Enquiries />} />
-      <Route path='/messages' element={<Messages />} />
+      <Route path='/messages' element={<Messages />} /> */}
     </Routes>
   </Router>
   </AuthProvider>
