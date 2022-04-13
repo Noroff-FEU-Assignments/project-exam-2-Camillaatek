@@ -43,12 +43,16 @@ const Dashboard = () => {
                 <Link to={'/enquiries'} className='dashboard__li'><PermContactCalendar />Enquiries</Link>
             </li>
             <li>
-                <Link to={'/allhotels'} className='dashboard__li'><HotelIcon />Hotels</Link>
+                <Link to={'/admin'} className='dashboard__li'><HotelIcon />Hotels</Link>
             </li>
             <li>
                 <Link to={'/'} className='dashboard__li'><HomeIcon />Back to website</Link>
             </li>
+            <div className="dashboard__info">
             <Avatar />
+            <p>{auth.user.username}</p>
+            <p>{auth.user.email}</p>
+            </div>
             <li>
                 {!auth ? (
                     <Link to={'/login'} className='dashboard__li'>

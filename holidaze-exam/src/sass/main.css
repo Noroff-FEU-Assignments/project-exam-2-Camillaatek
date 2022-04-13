@@ -342,4 +342,10 @@ form .sendBtn {
   -ms-grid-columns: 0.1fr 1fr;
       grid-template-columns: 0.1fr 1fr;
 }
+
+@media screen and (max-width: 780px) {
+  .hotel {
+    grid-template: none;
+  }
+}
 /*# sourceMappingURL=main.css.map */
