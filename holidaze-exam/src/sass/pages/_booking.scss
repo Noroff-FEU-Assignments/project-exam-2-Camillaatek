@@ -1,11 +1,47 @@
 .hotel {
+    font-family: $secondaryFont;
     display: grid;
     grid-template-columns: 0.1fr 1fr;
+
+    &__page {
+        margin: 10px 10px;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    
+       
+        img{
+            width: 154px;
+            height: 93px;
+            border-radius: 10px;
+        }
+    }
+    &__card {
+            margin: 10px 10px;
+        }
 }
 
 @media screen and (max-width: 780px) {
     .hotel {
         grid-template: none;
+        
+        &__title {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__list {
+        margin: 0 20px;
+        
+        }
+        &__card {
+
+
+        img{
+            width: 250px;
+            height: 150px;
+        }
+    }
     }
     
 }

@@ -27,6 +27,9 @@ import useAxios from '../../../../hooks/useAxios'
 import useToggle from '../../../../hooks/useToggle'
 import { BOOKINGS_PATH } from '../../../../utils/Api'
 import Dashboard from '../components/Dashboard'
+import StarIcon from '@mui/icons-material/Star';
+import KitchenIcon from '@mui/icons-material/Kitchen';
+import BedIcon from '@mui/icons-material/Bed';
 
 const Admin = () => {
   const [isTriggered, setIsTriggered] = useToggle()
@@ -103,8 +106,15 @@ const Admin = () => {
               }
 
               return (
-                <div className="card" key={idx}>
-                  <h3>{item.attributes.name}</h3>
+                <div className="hotel__card" key={idx}>
+                  <img src={item.attributes.image_url} alt="" />
+                  <div className="hotel__title">
+                    <h2>{item.attributes.name}</h2>
+                   <h2>{item.attributes.cost}</h2> 
+                  </div>
+                  <p>{item.attributes.location}</p>
+                  <p><StarIcon style={{ fontSize: 15, color: '#FFA800' }}/>{item.attributes.rating}</p>
+                  <p><KitchenIcon />{item.attributes.bedroom}<BedIcon />{item.attributes.bedroom}<BedIcon />{item.attributes.bedroom}</p>
                   <Link to={`/booking/${item.id}`}>VIEW</Link>
                   <button onClick={handleDelete}>
                     DELETE
