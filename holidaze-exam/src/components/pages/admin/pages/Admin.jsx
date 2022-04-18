@@ -110,7 +110,7 @@ const Admin = () => {
                   <img src={item.attributes.image_url} alt="" />
                   <div className="hotel__title">
                     <h2 className='hotel__name'>{item.attributes.name}</h2>
-                   <h2 className='hotel__cost'>{item.attributes.cost} Kr / Night</h2> 
+                   <h2 className='hotel__cost'>{item.attributes.cost} Kr</h2> 
                   </div>
                   <p className='hotel__location'>{item.attributes.location}</p>
                   <p className='hotel__rating'><StarIcon style={{ fontSize: 15, color: '#FFA800' }}/>{item.attributes.rating}</p>

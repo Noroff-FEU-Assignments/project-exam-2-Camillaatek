@@ -30,7 +30,7 @@
         padding-top: 2px;
     }
     &__info {
-        margin-top: 7px;
+        margin: 10px 0;
         display: flex;
         justify-content: space-between;
     }
@@ -50,7 +50,7 @@
         color: white;
         font-family: $secondaryFont;
         cursor: pointer;
-        width: 40%;
+        width: 47%;
         margin: 3px;
     }
 
@@ -62,7 +62,7 @@
         color: $secondaryColor;
         font-family: $secondaryFont;
         cursor: pointer;
-        width: 40%;
+        width: 47%;
         margin: 3px;
         font-weight: bold;
     }
@@ -100,12 +100,16 @@
    &__page {
        margin: 40px;
    }
-        
+   &__title {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}  
    &__card {
 
 
     img{
-        width: 210px;
+        width: 230px;
         height: 150px;
     }
 }
