@@ -18,14 +18,63 @@
         }
     }
     &__card {
-            margin: 10px 10px;
-        }
+        margin: 10px 10px;
+    }
+
+    &__name {
+        font-size: 17px;
+    }
+    
+    p {
+        color: $fontGrey;
+        padding-top: 2px;
+    }
+    &__info {
+        margin-top: 7px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__cost {
+        color: $secondaryColor;
+        font-size: 17px;
+    }
+    &__location {
+        font-size: 14px;
+    }
+
+    &__delete {
+        padding: 4px;
+        background-color: red;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-family: $secondaryFont;
+        cursor: pointer;
+        width: 40%;
+        margin: 3px;
+    }
+
+    &__edit {
+        padding: 3px;
+        background-color: white;
+        border: 1px solid $secondaryColor;
+        border-radius: 5px;
+        color: $secondaryColor;
+        font-family: $secondaryFont;
+        cursor: pointer;
+        width: 40%;
+        margin: 3px;
+        font-weight: bold;
+    }
 }
 
 @media screen and (max-width: 780px) {
     .hotel {
         grid-template: none;
         
+        &__page {
+            margin: 0;
+        }
         &__title {
             display: flex;
             justify-content: space-between;
@@ -42,6 +91,37 @@
             height: 150px;
         }
     }
+    }
+    
+}
+
+@media screen and (min-width: 781px) {
+    .hotel {
+   &__page {
+       margin: 40px;
+   }
+        
+   &__card {
+
+
+    img{
+        width: 210px;
+        height: 150px;
+    }
+}
+   
+
+   
+    }
+    
+}
+
+@media screen and (min-width: 1280px) {
+    .hotel {
+        &__page {
+            margin: 40px 0 0 70px;
+        }
+   
     }
     
 }

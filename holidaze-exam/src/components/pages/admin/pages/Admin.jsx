@@ -109,14 +109,30 @@ const Admin = () => {
                 <div className="hotel__card" key={idx}>
                   <img src={item.attributes.image_url} alt="" />
                   <div className="hotel__title">
-                    <h2>{item.attributes.name}</h2>
-                   <h2>{item.attributes.cost}</h2> 
+                    <h2 className='hotel__name'>{item.attributes.name}</h2>
+                   <h2 className='hotel__cost'>{item.attributes.cost} Kr / Night</h2> 
                   </div>
-                  <p>{item.attributes.location}</p>
-                  <p><StarIcon style={{ fontSize: 15, color: '#FFA800' }}/>{item.attributes.rating}</p>
-                  <p><KitchenIcon />{item.attributes.bedroom}<BedIcon />{item.attributes.bedroom}<BedIcon />{item.attributes.bedroom}</p>
-                  <Link to={`/booking/${item.id}`}>VIEW</Link>
-                  <button onClick={handleDelete}>
+                  <p className='hotel__location'>{item.attributes.location}</p>
+                  <p className='hotel__rating'><StarIcon style={{ fontSize: 15, color: '#FFA800' }}/>{item.attributes.rating}</p>
+                  <p className='hotel__info'>
+                    <div>
+                    <KitchenIcon style={{color: '#1E195B'}}/>
+                      {item.attributes.bedroom} Bd.
+                    </div>
+                    <div>
+                      <BedIcon style={{color: '#1E195B'}}/>
+                      {item.attributes.bedroom} Gs.
+                    </div>
+                    <div>
+                      <BedIcon style={{color: '#1E195B'}}/>
+                      {item.attributes.bedroom} Sq.
+                    </div></p>
+                  <Link to={`/booking/${item.id}`}>
+                    <button className='hotel__edit'>
+                      EDIT
+                      </button>
+                  </Link>
+                  <button className='hotel__delete' onClick={handleDelete}>
                     DELETE
                   </button>
                 </div>
