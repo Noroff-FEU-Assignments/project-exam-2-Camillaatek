@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom"
 import useAxios from "../../../../hooks/useAxios"
 import useToggle from "../../../../hooks/useToggle"
 import { BOOKINGS_PATH } from "../../../../utils/Api"
+import EditBooking from "../components/EditBooking"
 
 
 const AllHotels = () => {
@@ -38,7 +39,7 @@ const AllHotels = () => {
       <p>{booking.cost}</p>
 
       <h3>Edit:</h3>
-      {/* <EditBooking updateBooking={updateBooking} booking={booking} /> */}
+      <EditBooking updateBooking={updateBooking} booking={booking} />
     </div>
   )
 }
