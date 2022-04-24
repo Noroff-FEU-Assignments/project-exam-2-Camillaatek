@@ -1,0 +1,54 @@
+.acc__page {
+   margin: auto;
+   width: 90%;
+   font-family: $secondaryFont;
+   .acc__card {
+       width: 290px;
+      
+   } 
+   .acc__info__grid {
+       margin-left: 10px;
+   }
+   .acc__name {
+           font-size: 16px;
+           margin-top: 10px;
+       }
+    .acc__cost {
+            color: blue;
+            margin-bottom: 5px;
+            
+            font-size: 16px;
+        }
+        .acc__smallinfo{
+            color: $fontGrey;
+        }
+       p {
+           padding: 2px 0;
+       }
+       
+    .acc__info {
+        margin: 10px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        color: $primaryColor;
+        }
+
+    img {
+            height: 190px;
+            border-radius: 10px;
+            width: 290px;
+        }
+}
+
+@media screen and (min-width: 520px) {
+    .acc__page {
+        margin: auto;
+        max-width: 300px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .acc__page {
+      
+    }
+}
