@@ -4,6 +4,7 @@ import useAxios from "../../hooks/useAxios"
 import useToggle from "../../hooks/useToggle"
 import { BOOKINGS_PATH } from "../../utils/Api"
 import StarIcon from '@mui/icons-material/Star';
+import NavBar from "../navbar/NavBar"
 
 
 
@@ -24,6 +25,8 @@ const Details = () => {
   
 
   return (
+      <>
+      <NavBar />
     <div className="details">
         <img src={details.image_url} alt="" />
         <div className="details__title">
@@ -44,6 +47,7 @@ const Details = () => {
                   </Link>
         
     </div>
+    </>
   )
 }
 
