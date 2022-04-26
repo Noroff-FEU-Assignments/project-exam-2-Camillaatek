@@ -77,6 +77,8 @@ import { BOOKINGS_PATH } from '../../utils/Api';
 import { Link } from 'react-router-dom';
 import Dashboard from './admin/components/Dashboard';
 import NavBar from '../navbar/NavBar';
+import SquareFootIcon from '@mui/icons-material/SquareFoot';
+import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 
 const Accommodations = () => {
   const [isTriggered, setIsTriggered] = useToggle()
@@ -117,7 +119,7 @@ const Accommodations = () => {
       <div className="acc__list">
         {bookings.map((item, idx) => {
           return (
-            <Link to={`/details/${item.id}`}>
+            <Link to={`/details/${item.id}`} style={{ color: 'inherit', textDecoration: 'inherit'}}>
             <div className="acc__card" key={idx}>
               <img src={item.attributes.image_url} alt="" />
               <div className="acc__info__grid">
@@ -130,7 +132,7 @@ const Accommodations = () => {
               </div>
               <p className='acc__info'>
                 <div>
-                <KitchenIcon style={{color: '#1E195B'}}/>
+                <PeopleAltIcon style={{color: '#1E195B'}}/>
                   {item.attributes.bedroom} Bd.
                 </div>
                 <div>
@@ -138,7 +140,7 @@ const Accommodations = () => {
                   {item.attributes.bedroom} Gs.
                 </div>
                 <div>
-                  <BedIcon style={{color: '#1E195B'}}/>
+                  <SquareFootIcon style={{color: '#1E195B'}}/>
                   {item.attributes.bedroom} Sq.
                 </div></p>
               <h2 className='acc__cost'>{item.attributes.cost} Kr / Night</h2> 

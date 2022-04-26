@@ -12,6 +12,7 @@ import Accommodations from "./components/pages/Accommodations";
 import Booking from "./components/pages/admin/pages/Booking";
 import Enquiries from "./components/pages/admin/pages/Enquiries";
 import Messages from "./components/pages/admin/pages/Messages";
+import NewEntry from "./components/pages/admin/pages/NewEntry";
 
 
 
@@ -27,6 +28,7 @@ function App() {
       <Route path='/booking/:id' element={<Booking />} />
       <Route path='/details/:id' element={<Details/>} />
       <Route path='/admin' element={<Admin />} />
+      <Route path='/newentry' element={<NewEntry />} />
       {/* <Route path='/allhotels' element={<AllHotels />} /> */}
       <Route path='/enquiries' element={<Enquiries />} />
       <Route path='/messages' element={<Messages />} />

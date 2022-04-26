@@ -32,7 +32,7 @@ const Dashboard = () => {
             <ul className={isMobile ? 'dashboard__nav-links-mobile' : 'dashboard__nav-links'}
             onClick={() => setIsMobile(false)}
             >
-             <Link to={'/'} className='dashboard__li'>
+             <Link to={'/newentry'} className='dashboard__li'>
                         <button className='dashboard__newentryBtn'>
                         Add New Entry</button></Link>
             <li>
