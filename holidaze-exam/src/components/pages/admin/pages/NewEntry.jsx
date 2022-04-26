@@ -10,7 +10,10 @@ const NewEntry = () => {
             data: {
                 name: formData.name,
                 description: formData.description,
-                contact: formData.contact,
+                cost: formData.cost,
+                location: formData.location,
+                rating: formData.rating,
+                image_url: formData.image_url,
             },
         }
 
@@ -18,10 +21,10 @@ const NewEntry = () => {
         console.log(responseData)
     }
   return (
-      <>
+      <div className="entrygrid">
       <Dashboard />
       <BookingsForm sendBooking={sendBooking} />
-      </>
+    </div>
   )
 }
 

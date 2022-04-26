@@ -6,6 +6,7 @@
         border-radius: 5px;
         cursor: pointer;
         font-family: $secondaryFont;
+        font-weight: bold;
 }
 
 @mixin longBtnPrimary {
@@ -17,6 +18,7 @@
         border-radius: 5px;
         cursor: pointer;
         font-family: $secondaryFont;
+        font-weight: bold;
 }
 
 @mixin longBtnSecondary {
@@ -28,4 +30,5 @@
         border-radius: 5px;
         cursor: pointer;
         font-family: $secondaryFont;
+        font-weight: bold;
 }

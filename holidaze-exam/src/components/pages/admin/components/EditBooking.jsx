@@ -14,7 +14,10 @@ const EditBooking = ({ booking, updateBooking }) => {
         defaultValues: {
             name: booking.name,
             description: booking.description,
-            cost: booking.cost
+            cost: booking.cost,
+            location: booking.location,
+            rating: booking.rating,
+            image_url: booking.image_url,
         },
     })
 
@@ -54,6 +57,27 @@ const EditBooking = ({ booking, updateBooking }) => {
             defaultValue={booking.cost}
             />
             {errors.cost && <span>{errors.cost.message}</span>}
+
+            <input
+            {...register('location')}
+            placeholder='Location..'
+            defaultValue={booking.location}
+            />
+            {errors.location && <span>{errors.location.message}</span>}
+
+            <input
+            {...register('rating')}
+            placeholder='Rating..'
+            defaultValue={booking.rating}
+            />
+            {errors.rating && <span>{errors.rating.message}</span>}
+
+            <input
+            {...register('image_url')}
+            placeholder='image_url..'
+            defaultValue={booking.image_url}
+            />
+            {errors.image_url && <span>{errors.image_url.message}</span>}
 
             <button>Update</button>
         </form>

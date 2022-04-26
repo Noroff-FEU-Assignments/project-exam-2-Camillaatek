@@ -26,6 +26,9 @@ const AllHotels = () => {
         name: formData.name,
         description: formData.description,
         cost: formData.cost,
+        location: formData.location,
+        rating: formData.rating,
+        image_url: formData.image_url,
       },
     }
     const responseData = await http.put(`${BOOKINGS_PATH}/${id}`, options)
@@ -37,6 +40,9 @@ const AllHotels = () => {
       <h1>{booking.name}</h1>
       <h2>{booking.description}</h2>
       <p>{booking.cost}</p>
+      <p>{booking.location}</p>
+      <p>{booking.rating}</p>
+      <p>{booking.image_url}</p>
 
       <h3>Edit:</h3>
       <EditBooking updateBooking={updateBooking} booking={booking} />
