@@ -29,10 +29,63 @@
         margin-bottom: 20px;
     }
 
-    &__desc {
-        margin-bottom: 20px
+    &__desc p{
+        margin-bottom: 20px;
+        color: $greyColor;
     }
+    span {
+            font-weight: bold;
+        }
     &__button {
         @include longBtnPrimary;
+        margin-bottom: 20px;
+    }
+    .details__grid__features {
+        h2 {
+            font-size: 16px;
+            border-bottom: 1px solid #cccccc;
+            padding-bottom: 5px;
+        }
+        p {
+            color: $greyColor;display: flex;
+            justify-content: space-between;
+        }
+        span {
+            color: black;
+            font-weight: 100;
+        }
+    }
+}
+
+@media screen and (min-width: 780px) {
+    .details {
+        margin: auto;
+    max-width: 600px;
+        img {
+            width: 600px;
+            height: 400px;
+        }
+    }
+    .details__title {
+        h1, p{
+            font-size: 20px;
+            margin-top: 10px;
+        }
+    }
+    .details__desc {
+        padding-right: 40px;
+    }
+    .details__grid {
+        display: grid;
+        grid-template-columns: 1fr 0.5fr;
+        p{
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    }
+    .details__grid__features {
+        p{
+            margin: 10px 0;
+        }
     }
 }
