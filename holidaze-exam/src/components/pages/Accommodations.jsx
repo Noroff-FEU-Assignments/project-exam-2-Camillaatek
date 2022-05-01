@@ -107,7 +107,14 @@ const Accommodations = () => {
     return <div>Loading...</div>;
   }
 
+  const searchBar = (e) => {
+    let value = e.target.value
+    let result = []
 
+    if (value) {
+      result = filterDa
+    }
+  }
   return (
     <div className="acc">
    
@@ -115,7 +122,7 @@ const Accommodations = () => {
    
     <div className="acc__page">
   
-      
+      <input onChange={searchBar} className="search__Bar"  placeholder='Search..'/>
       <div className="acc__list">
         {bookings.map((item, idx) => {
           return (
