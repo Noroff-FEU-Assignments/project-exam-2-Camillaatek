@@ -88,6 +88,8 @@ const Accommodations = () => {
   const http = useAxios()
   const [isLoading, setIsLoading] = useState(true)
 
+  const [filteredData, setFilteredData] = useState(bookings)
+
   useEffect(() => {
     setIsLoading(true);
     const fetchData = async () => {
@@ -112,7 +114,11 @@ const Accommodations = () => {
     let result = []
 
     if (value) {
-      result = filterDa
+      result = filteredData.filter((data) => {
+        const slicedValue = value.charAt(0).toUpperCase() + value.slice(1).toLowerCase()
+        return data.name.includes(slicedValue)
+      })
+      setFilteredData(result)
     }
   }
   return (
