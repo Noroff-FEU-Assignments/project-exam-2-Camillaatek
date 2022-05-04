@@ -88,7 +88,7 @@ const Accommodations = () => {
   const http = useAxios()
   const [isLoading, setIsLoading] = useState(true)
 
-  const [filteredData, setFilteredData] = useState(bookings)
+
 
   useEffect(() => {
     setIsLoading(true);
@@ -109,18 +109,7 @@ const Accommodations = () => {
     return <div>Loading...</div>;
   }
 
-  const searchBar = (e) => {
-    let value = e.target.value
-    let result = []
-
-    if (value) {
-      result = filteredData.filter((data) => {
-        const slicedValue = value.charAt(0).toUpperCase() + value.slice(1).toLowerCase()
-        return data.name.includes(slicedValue)
-      })
-      setFilteredData(result)
-    }
-  }
+  
   return (
     <div className="acc">
    
@@ -128,7 +117,7 @@ const Accommodations = () => {
    
     <div className="acc__page">
   
-      <input onChange={searchBar} className="search__Bar"  placeholder='Search..'/>
+      {/* <input onChange={searchBar} className="search__Bar"  placeholder='Search..'/> */}
       <div className="acc__list">
         {bookings.map((item, idx) => {
           return (
