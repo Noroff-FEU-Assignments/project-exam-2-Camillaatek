@@ -3,10 +3,13 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneIcon from "@mui/icons-material/Phone";
 import MailIcon from "@mui/icons-material/Mail";
 import logo from "../../images/HOLIDAZE.png";
+import NavBar from "../navbar/NavBar"
+import Footer from "../Footer"
 
 const Contact = () => {
   return (
     <>
+    <NavBar />
       <div className="contact">
         <div className="contact__form">
           <h1>Fill in the form to contact us</h1>
@@ -35,6 +38,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
