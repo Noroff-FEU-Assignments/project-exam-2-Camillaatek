@@ -1,0 +1,14 @@
+.contact {
+  .contact__form {
+    max-width: 300px;
+    margin: auto;
+    h1 {
+      font-family: $primaryFont;
+      color: $secondaryColor;
+    }
+    p {
+      font-family: $secondaryFont;
+      color: $fontGrey;
+    }
+  }
+}

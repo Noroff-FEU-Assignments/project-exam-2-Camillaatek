@@ -1,19 +1,20 @@
 //variables
-@import './variables';
-@import './mixin';
+@import "./variables";
+@import "./mixin";
 
 //components
-@import './components/navbar';
-@import './default';
-@import './components/loginForm';
-@import './components/error';
-@import './components/footer';
-@import './components/dashboard';
+@import "./components/navbar";
+@import "./default";
+@import "./components/loginForm";
+@import "./components/error";
+@import "./components/footer";
+@import "./components/dashboard";
 
 //pages
-@import './pages/home';
-@import './pages/login';
-@import './pages/booking';
-@import './pages/accommodations';
-@import './pages/details';
-@import './pages/newEntry';
+@import "./pages/home";
+@import "./pages/login";
+@import "./pages/booking";
+@import "./pages/accommodations";
+@import "./pages/details";
+@import "./pages/newEntry";
+@import "./pages/contact";
