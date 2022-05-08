@@ -1,5 +1,6 @@
 .contact {
-  .contact__form {
+  margin: 20px 0;
+  &__form {
     max-width: 300px;
     margin: auto;
     h1 {
@@ -10,5 +11,97 @@
       font-family: $secondaryFont;
       color: $fontGrey;
     }
+    .p_margin {
+      margin: 0 0 15px 0;
+    }
+  }
+  .contact__info {
+    max-width: 300px;
+    margin: auto;
+    img {
+      width: 200px;
+    }
+    .contact__text div{
+       
+        display: grid;
+        grid-template-columns: 0.1fr 1fr;
+        font-family: $secondaryFont;
+        margin: 10px 10px;
+        color: $fontGrey;
+    }
+  }
+}
+
+.contact__field {
+  max-width: 300px;
+    margin: auto;
+
+  p {
+    font-family: $secondaryFont;
+    color: $secondaryColor;
+    padding-top: 5px;
+  }
+  textarea {
+    width: 256px;
+    height: 100px;
+    padding: 5px 10px;
+    background-color: $inputGrey;
+    border: none;
+    font-family: $secondaryFont;
+    font-size: 13px;
+    resize: none;
+  }
+  button {
+    margin: 10px 0;
+    @include longBtnPrimary;
+    width: 276px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contact__field {
+    textarea {
+      width: 315px;
+    }
+    button {
+      width: 335px;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 100px 50px;
+    &__form {
+      max-width: 400px;
+     input, textarea {
+       width: 380px;
+     }
+    }
+    .contact__text p {
+  padding: 0 10px;
+    }
+    .contact__info {
+      img {
+        width: 300px;
+        margin: 20px 0;
+      }
+    }
+  }
+  .contact__field {
+    max-width: 400px;
+    button {
+      width: 400px;
+    }
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .contact {
+    max-width: 1300px;
+    margin: auto;
+    margin-top: 100px;
   }
 }

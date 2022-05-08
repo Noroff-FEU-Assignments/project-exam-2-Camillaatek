@@ -58,6 +58,7 @@ const Details = () => {
             <p>Square:</p>
             <p>WIFI: <span>{details.wifi ? "Yes" : "No"}</span></p>
             <p>Breakfast: <span>{details.breakfast ? "Yes" : "No"}</span></p>
+            <p>Kitchen: <span>{details.kitchen ? "Yes" : "No"}</span></p>
           </div>
         </div>
     </div>
