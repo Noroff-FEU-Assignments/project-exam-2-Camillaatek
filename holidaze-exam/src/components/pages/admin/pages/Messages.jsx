@@ -4,9 +4,12 @@ import Dashboard from '../components/Dashboard'
 const Messages = () => {
   return (
       <div className="messages">
-      <Dashboard />
-    <div>Message</div>
-    <h1>eigweiognweigwengiewngnnnnnnnnnnnnnnnnnnnnnnnnn</h1>
+        <div className="messages__dash">
+          <Dashboard />
+        </div>
+      <div className="messages__page">
+      
+      </div>
     </div>
   )
 }

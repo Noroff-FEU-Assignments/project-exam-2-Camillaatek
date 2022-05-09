@@ -6,7 +6,7 @@ import contact from "../../images/contact.png";
 import NavBar from "../navbar/NavBar"
 import Footer from "../Footer"
 import axios from "axios";
-import { BOOKINGS_URL } from "../../utils/Api";
+import { CONTACT_URL } from "../../utils/Api";
 import ContactForm from "./contactForm";
 
 const Contact = () => {
@@ -19,7 +19,7 @@ const Contact = () => {
         message: formData.message,
       },
     }
-    const responseData = await axios.post(BOOKINGS_URL, options)
+    const responseData = await axios.post(CONTACT_URL, options)
     console.log(responseData)
   }
   return (
