@@ -37,3 +37,13 @@
 
 }
 
+@media screen and (min-width: 781px){
+    .messages {
+        display: grid;
+        grid-template-columns: 0.1fr 1fr;
+        .messages__nametime {
+            display: grid;
+            grid-template-columns: 1fr 0.1fr;
+        }
+    }
+}
