@@ -7,6 +7,7 @@ import { CONTACT_PATH } from '../../../../utils/Api'
 import { format } from 'fecha'
 import NavBar from '../../../navbar/NavBar'
 import Footer from '../../../Footer'
+import Dashboard from '../components/Dashboard'
 
 const MessageDetail = () => {
     const { id } = useParams()
@@ -22,22 +23,27 @@ const MessageDetail = () => {
     fetchData().catch(console.error)
   }, [triggered])
   return (
-    <>
-    <NavBar />
     <div className="MessDetail__page">
-        <div className="name__date">
-            <p>{details.name}</p>
-            <p>{format(new Date(details.publishedAt), 'HH:MM Do MMMM YYYY')}</p>
-        </div>
+      <div className="dash__grid">
+        <Dashboard />
+      </div>
+    <div className="site__grid">
+        <h1>Messages</h1>
+      <div className="info__site">
+        <div className="message__form">
         <div className="info">
-            <p>{details.email}</p>
-            <h2>{details.subject}</h2>
-            <p>{details.message}</p>
+            <p className='name'>{details.name}</p>
+            <p className='email'>{details.email}</p>
+            <p className='subject'>{details.subject}</p>
+            <p className='message'>{details.message}</p>
         </div>
-        
+      </div>
+      </div>
     </div>
-    <Footer />
-    </>
+      
+    </div>
+ 
+    
   )
 }
 

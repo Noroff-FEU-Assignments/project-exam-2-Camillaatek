@@ -7,18 +7,12 @@
     font-family: $secondaryFont;
     font-size: 14px;
 .messages__card {
-    padding: 10px 15px;
+    padding: 10px 25px;
     height: 70px;
     border-bottom: 3px solid #5142F5;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
-  p {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 75ch;
-      
-  }
+
   .messages__nametime {
      display: grid;
      grid-template-columns: 1fr 1fr;
@@ -32,6 +26,10 @@
     }
     .message{
         color: $fontGrey;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        
     }
 }
 
@@ -41,9 +39,28 @@
     .messages {
         display: grid;
         grid-template-columns: 0.1fr 1fr;
-        .messages__nametime {
-            display: grid;
-            grid-template-columns: 1fr 0.1fr;
+        
+    }
+    .messages__card {
+       .messages__nametime {
+            .date  {
+                display: flex;
+                justify-content: end;
+                padding-right: 50px;
+        } }
+    }
+}
+
+@media screen and (min-width: 1280px){
+  
+    .messages__card {
+        padding: 10px 50px;
+        .message{
+            color: $fontGrey;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 150ch;
         }
     }
 }
