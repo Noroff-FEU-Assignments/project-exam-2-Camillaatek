@@ -8,6 +8,7 @@ import { format } from 'fecha'
 import NavBar from '../../../navbar/NavBar'
 import Footer from '../../../Footer'
 import Dashboard from '../components/Dashboard'
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 
 const MessageDetail = () => {
     const { id } = useParams()
@@ -22,6 +23,12 @@ const MessageDetail = () => {
     }
     fetchData().catch(console.error)
   }, [triggered])
+
+  // const handleDelete = () => {
+  //   if (windows.confirm('Are you sure?')) {
+  //     deleteContact()
+  //   }
+  // }
   return (
     <div className="MessDetail__page">
       <div className="dash__grid">
@@ -37,6 +44,9 @@ const MessageDetail = () => {
             <p className='subject'>{details.subject}</p>
             <p className='message'>{details.message}</p>
         </div>
+        <button className='message__delete' style = {{ color: 'red'}}>
+           <DeleteForeverIcon />
+        </button>
       </div>
       </div>
     </div>
