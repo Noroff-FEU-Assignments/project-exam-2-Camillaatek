@@ -6,3 +6,5 @@ export const BOOKINGS_PATH = 'api/restaurants'
 
 export const CONTACT_PATH = 'api/contacts'
 export const CONTACT_URL = `${BASE_URL}api/contacts`
+
+export const RESERVATION_URL = `${BASE_URL}api/reservations`

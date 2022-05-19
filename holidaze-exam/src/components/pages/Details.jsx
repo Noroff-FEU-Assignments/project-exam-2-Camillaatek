@@ -2,9 +2,12 @@ import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
 import useAxios from "../../hooks/useAxios"
 import useToggle from "../../hooks/useToggle"
-import { BOOKINGS_PATH } from "../../utils/Api"
+import { BOOKINGS_PATH, RESERVATION_URL } from "../../utils/Api"
 import StarIcon from '@mui/icons-material/Star';
 import NavBar from "../navbar/NavBar"
+import axios from "axios"
+import ReservationForm from "./ReservationForm"
+import Footer from "../Footer"
 
 
 
@@ -22,8 +25,19 @@ const Details = () => {
     fetchData().catch(console.error)
   }, [triggered])
 
-  
-
+  const sendReservation = async (formData) => {
+    const options = {
+      data: {
+        name: formData.name,
+        email: formData.email,
+        checkin: formData.checkin,
+        checkout: formData.checkout,
+        guests: formData.guests,
+        note: formData.guets,
+      },
+    }
+    const fetchData = await axios.post(RESERVATION_URL, options)
+  }
   return (
       <>
       <NavBar />
@@ -44,11 +58,6 @@ const Details = () => {
               <span>Description</span>
               <p>{details.description}</p>
             </div>
-            <Link to={`/`}>
-                    <button className='details__button'>
-                      Book Now
-                    </button>
-            </Link>
           </div>
           <div className="details__grid__features">
             <h2>General features</h2>
@@ -61,7 +70,9 @@ const Details = () => {
             <p>Kitchen: <span>{details.kitchen ? "Yes" : "No"}</span></p>
           </div>
         </div>
+        <ReservationForm sendReservation={sendReservation} />
     </div>
+    <Footer />
     </>
   )
 }
