@@ -38,7 +38,9 @@ export const reservationSchema = yup.object().shape({
     .required("Please enter an email address")
     .email("Please enter a valid email address"),
     note: yup.string().required("Please enter a message"),
-    rating: yup
+    guests: yup
     .number()
-    .required("Please enter the number of guests")
+    .required("Please enter the number of guests"),
+    checkin: yup.date().required("please enter a date"),
+    checkout: yup.date().required("please enter a date")
 })

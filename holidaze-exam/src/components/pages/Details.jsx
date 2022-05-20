@@ -33,10 +33,11 @@ const Details = () => {
         checkin: formData.checkin,
         checkout: formData.checkout,
         guests: formData.guests,
-        note: formData.guets,
+        note: formData.note,
       },
     }
     const fetchData = await axios.post(RESERVATION_URL, options)
+    console.log(fetchData)
   }
   return (
       <>
