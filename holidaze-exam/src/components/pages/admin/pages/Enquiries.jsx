@@ -5,12 +5,15 @@ import useToggle from '../../../../hooks/useToggle'
 import { RESERVATION_URL } from '../../../../utils/Api'
 import { reservationSchema } from '../../../../utils/yupSchemas'
 import Dashboard from '../components/Dashboard'
+import { format } from 'fecha'
+import Popup from '../components/PopUp'
 
 const Enquiries = () => {
   const [isTriggered, setIsTriggered] = useToggle()
   const [error, setError] = useState()
   const [reservations, setReservations] = useState([])
   const [isLoading, setIsLoading] = useState(true)
+  const [buttonPopup, setButtonPopup] = useState(false)
 
   const [auth] = useContext(AuthContext)
 
@@ -46,10 +49,19 @@ const Enquiries = () => {
            return (
              <div className="reservation__card">
                <div className="reservation__info">
-                 <p>{item.attributes.name}</p>
+                 <div className='name'><p>{item.attributes.name}</p>
+                 <p>{item.attributes.email}</p></div>
+                 <p>{item.attributes.guests}</p>
+                 <p>{format(new Date(item.attributes.checkin), 'MMMM Do HH:MM')}</p>
+                 <p>{format(new Date(item.attributes.checkout), 'Do MMMM HH:MM')}</p>
+              
+                 <button onClick={() => setButtonPopup(true)}>Open</button>
+                    <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+                   <p>{item.attributes.note}</p>
+                </Popup>
                </div>
              </div>
-           )
+           ) 
          })}
        </div>
     
