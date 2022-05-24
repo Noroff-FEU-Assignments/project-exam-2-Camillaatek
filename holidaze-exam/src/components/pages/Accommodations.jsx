@@ -79,6 +79,7 @@ import Dashboard from './admin/components/Dashboard';
 import NavBar from '../navbar/NavBar';
 import SquareFootIcon from '@mui/icons-material/SquareFoot';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
+import Dropdown from '../Dropdown';
 
 const Accommodations = () => {
   const [isTriggered, setIsTriggered] = useToggle()
@@ -87,21 +88,74 @@ const Accommodations = () => {
   const [error, setError] = useState();
   const http = useAxios()
   const [isLoading, setIsLoading] = useState(true)
+  // const [filteredData, setFilteredData] = useState(bookings);
 
 
+
+  const [searchItems, setSearchItems] = useState([]);
+  const [searching, setSearching] = useState(false);
+  const [inputValue, setInputValue] = useState("");
+  const [dropdownClosed, setDropdown] = useState("false");
+  const [selectedOption, setSelectedOption] = useState('');
+
+
+
+  const handleToggle = () => {
+    setDropdown(!dropdownClosed);
+};
 
   useEffect(() => {
     setIsLoading(true);
     const fetchData = async () => {
     const data = await http.get(BOOKINGS_PATH)
     setBookings(data.data.data)
+    
     setIsLoading(false);
   }
 
   fetchData().catch((error) => setError(error.response.data.error));
   }, [isTriggered]);
 
- 
+
+
+
+//   const handleOption = (acctype) => {
+//     let value = acctype;
+//     let result = [];
+//     result = bookings.filter((data) => {
+//         if (acctype === '') {
+//             return data.type;
+//         }else {
+//             return data.type.includes(value);
+//         }
+//     });
+//     setSelectedOption(value);
+    
+// }
+
+
+
+
+
+
+  const onChange = (event) => {
+    if (event.target.value.length > 1) {
+      setSearching(true);
+      setInputValue(event.target.value);
+    } else {
+      setSearching(false);
+    }
+    const filteredData = bookings.filter((item) => {
+      
+      bookings.name.toLowerCase().includes(setSearching.toLowerCase())
+    });
+    setSearchItems(filteredData);
+    if(setSearching === false) {
+     
+    } 
+  };
+
+
 
   
 
@@ -116,8 +170,51 @@ const Accommodations = () => {
     <NavBar />
    
     <div className="acc__page">
+
+<div className="test" onClick={handleToggle}>
+  <Dropdown
+              items={searchItems}
+              onChange={onChange}
+              searching={searching}
+            />
+</div>
+    
+
+
+
+
+
+{!dropdownClosed ? <div className="header__select">
+                        <ul>
+
+                        <li onClick={() => {
+                                handleToggle();
+                            }}>
+                              </li>
+                           
+                        {/* {bookings.map((item, idx) => {
+                          return (
+                            <div className="acc__card" key={idx}>
+                              <h2 className='acc__name'>{item.attributes.name}</h2>
+                            </div>
+                          )
+                        })} */}
+                      
+                     
+                              
+                           
+                        
+                        </ul>
+                    </div> : ''}
+
+
+
+
+
+
+
+
   
-      {/* <input onChange={searchBar} className="search__Bar"  placeholder='Search..'/> */}
       <div className="acc__list">
         {bookings.map((item, idx) => {
           return (
