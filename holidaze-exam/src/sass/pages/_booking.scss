@@ -2,15 +2,17 @@
     font-family: $secondaryFont;
     display: grid;
     grid-template-columns: 0.1fr 1fr;
-
+    
     &__page {
-        margin: 10px 10px;
+        margin: 10px 10px; 
+        height: 100vh;
+    overflow-y:auto;
     }
     &__list {
         display: flex;
         flex-wrap: wrap;
-    
-       
+      
+        
         img{
             width: 154px;
             height: 93px;
