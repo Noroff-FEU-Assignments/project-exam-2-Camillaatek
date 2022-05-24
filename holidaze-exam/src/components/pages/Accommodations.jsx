@@ -146,8 +146,10 @@ const Accommodations = () => {
       setSearching(false);
     }
     const filteredData = bookings.filter((item) => {
-      
-      bookings.name.toLowerCase().includes(setSearching.toLowerCase())
+      return Object.values(item.attributes.name)
+        .join("")
+        .toLowerCase()
+        .includes(inputValue.toLowerCase());
     });
     setSearchItems(filteredData);
     if(setSearching === false) {
