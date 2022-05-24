@@ -22,7 +22,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Dropdown({ onChange, items, searching }){
+function Dropdown({ onChange, bookings, searching }){
     return (
       <div className='filter'>
         <input className='filter__input'
@@ -32,10 +32,19 @@ function Dropdown({ onChange, items, searching }){
         />
         {searching && (
             <div className="dropdown">
-                {items.map((item, idx) => {
+                {bookings.map((item, idx) => {
                     return (
-                        <Link to={`/details/${item.id}`} key={idx}>
-                            <p>{item.attributes.name}</p>
+                        <Link to={`/details/${item.id}`} key={idx} style={{ color: 'inherit', textDecoration: 'inherit'}}>
+                          <div className="dropdown__Card">
+                            <div className="drop__img">
+                            <img src={item.attributes.image_url} alt="" />
+                            </div>
+                            <div className="drop__info">
+                              <p className="drop__name">{item.attributes.name}</p>
+                            <p className="drop__location">{item.attributes.location}</p>
+                            <p className="drop__cost">{item.attributes.cost} Kr / Night</p>
+                            </div>
+                          </div>
                         </Link>
                     )
                 })}

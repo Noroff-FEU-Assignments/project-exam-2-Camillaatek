@@ -7,7 +7,11 @@
    margin: auto;
    width: 90%;
    font-family: $secondaryFont;
-
+.acc__search {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 5px;
+}
  
    .acc__card {
        width: 290px;
@@ -44,7 +48,6 @@
             height: 190px;
             border-radius: 10px;
             width: 290px;
-            margin-top: 20px;
         }
 }
 

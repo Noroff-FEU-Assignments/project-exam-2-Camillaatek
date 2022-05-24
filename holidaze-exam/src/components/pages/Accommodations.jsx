@@ -88,7 +88,6 @@ const Accommodations = () => {
   const [error, setError] = useState();
   const http = useAxios()
   const [isLoading, setIsLoading] = useState(true)
-  // const [filteredData, setFilteredData] = useState(bookings);
 
 
 
@@ -96,13 +95,10 @@ const Accommodations = () => {
   const [searching, setSearching] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const [dropdownClosed, setDropdown] = useState("false");
-  const [selectedOption, setSelectedOption] = useState('');
 
 
 
-  const handleToggle = () => {
-    setDropdown(!dropdownClosed);
-};
+
 
   useEffect(() => {
     setIsLoading(true);
@@ -116,107 +112,34 @@ const Accommodations = () => {
   fetchData().catch((error) => setError(error.response.data.error));
   }, [isTriggered]);
 
-
-
-
-//   const handleOption = (acctype) => {
-//     let value = acctype;
-//     let result = [];
-//     result = bookings.filter((data) => {
-//         if (acctype === '') {
-//             return data.type;
-//         }else {
-//             return data.type.includes(value);
-//         }
-//     });
-//     setSelectedOption(value);
-    
-// }
-
-
-
-
-
-
-  const onChange = (event) => {
-    if (event.target.value.length > 1) {
+  const onChange = (e) => {
+    if (e.target.value.length > 0) {
       setSearching(true);
-      setInputValue(event.target.value);
-    } else {
-      setSearching(false);
-    }
+      setInputValue(e.target.value);
+    } 
     const filteredData = bookings.filter((item) => {
-      return Object.values(item.attributes.name)
-        .join("")
-        .toLowerCase()
-        .includes(inputValue.toLowerCase());
+      return (item.attributes.name).toLowerCase().includes(inputValue.toLowerCase());
     });
     setSearchItems(filteredData);
-    if(setSearching === false) {
-     
-    } 
+   
   };
-
-
-
-  
 
   if (isLoading) {
     return <div>Loading...</div>;
   }
 
-  
   return (
     <div className="acc">
-   
     <NavBar />
-   
     <div className="acc__page">
-
-<div className="test" onClick={handleToggle}>
-  <Dropdown
-              items={searchItems}
-              onChange={onChange}
-              searching={searching}
-            />
-</div>
-    
-
-
-
-
-
-{!dropdownClosed ? <div className="header__select">
-                        <ul>
-
-                        <li onClick={() => {
-                                handleToggle();
-                            }}>
-                              </li>
-                           
-                        {/* {bookings.map((item, idx) => {
-                          return (
-                            <div className="acc__card" key={idx}>
-                              <h2 className='acc__name'>{item.attributes.name}</h2>
-                            </div>
-                          )
-                        })} */}
-                      
-                     
-                              
-                           
-                        
-                        </ul>
-                    </div> : ''}
-
-
-
-
-
-
-
-
-  
+      
+        <p className='acc__search'>Search</p>
+        <Dropdown
+            bookings={searchItems}
+            onChange={onChange}
+            searching={searching}
+          />
+ 
       <div className="acc__list">
         {bookings.map((item, idx) => {
           return (
