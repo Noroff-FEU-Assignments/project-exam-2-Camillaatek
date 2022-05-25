@@ -80,6 +80,8 @@ import NavBar from '../navbar/NavBar';
 import SquareFootIcon from '@mui/icons-material/SquareFoot';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import Dropdown from '../Dropdown';
+import { GoogleMapReact } from "google-map-react";
+import SimpleMap from './Map';
 
 const Accommodations = () => {
   const [isTriggered, setIsTriggered] = useToggle()
@@ -132,6 +134,8 @@ const Accommodations = () => {
     <div className="acc">
     <NavBar />
     <div className="acc__page">
+      <div className="acc__grid">
+
       
         <p className='acc__search'>Search</p>
         <Dropdown
@@ -174,6 +178,11 @@ const Accommodations = () => {
           )
         })}
       </div>
+    </div>
+    
+    <section className="testing">
+      <SimpleMap />
+    </section>
     </div>
 </div>
   )
