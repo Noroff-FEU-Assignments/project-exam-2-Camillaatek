@@ -1,34 +1,34 @@
 @mixin loginOutBtn {
-        color: white;
-        border: none;
-        background-color: $secondaryColor;
-        padding: 10px 15px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-family: $secondaryFont;
-        font-weight: bold;
+  color: white;
+  border: none;
+  background-color: $secondaryColor;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: $secondaryFont;
+  font-weight: bold;
 }
 
 @mixin longBtnPrimary {
-        color: white;
-        border: none;
-        background-color: $secondaryColor;
-        padding: 10px;
-        width: 150px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-family: $secondaryFont;
-        font-weight: bold;
+  color: white;
+  border: none;
+  background-color: $secondaryColor;
+  padding: 10px;
+  width: 150px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: $secondaryFont;
+  font-weight: bold;
 }
 
 @mixin longBtnSecondary {
-        color: white;
-        border: none;
-        background-color: $tertiaryColor;
-        padding: 10px;
-        width: 150px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-family: $secondaryFont;
-        font-weight: bold;
+  color: white;
+  border: none;
+  background-color: $tertiaryColor;
+  padding: 10px;
+  width: 150px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: $secondaryFont;
+  font-weight: bold;
 }

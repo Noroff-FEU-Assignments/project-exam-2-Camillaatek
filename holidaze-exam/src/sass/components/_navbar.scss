@@ -1,97 +1,91 @@
-
-
-
 .navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 75px;
+  background-color: $primaryColor;
+  color: white;
+  font-family: $secondaryFont;
+
+  &__logo {
+    font-size: 30px;
+    color: blue;
+  }
+
+  &__nav-links {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 75px;
-    background-color: $primaryColor;
-    color: white;
-    font-family: $secondaryFont;
-
-
-    &__logo {
-        font-size: 30px;
-        color: blue;
-    }
-
-    &__nav-links{
-        display: flex;
-        justify-content: flex-end;
-        list-style: none;
-        width: 75%;
+    justify-content: flex-end;
+    list-style: none;
+    width: 75%;
     color: white;
     text-decoration: none;
-    }
+  }
 
-    &__li {
-        text-decoration: none;
-        color: white;
-        font-size: 16px;
-        padding: 10px 20px;
-        margin: 0 10px;
-            :hover {
-                color: rgb(204, 204, 204);
-            }
+  &__li {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    :hover {
+      color: rgb(204, 204, 204);
     }
+  }
 
-    &__mobile-menu-icon {
-        display: none;
-    }
+  &__mobile-menu-icon {
+    display: none;
+  }
 
-    &__loginBtn {
-     @include loginOutBtn;
-    }
+  &__loginBtn {
+    @include loginOutBtn;
+  }
 
-    &__logoutBtn {
-        @include loginOutBtn;
-       }
+  &__logoutBtn {
+    @include loginOutBtn;
+  }
 }
 
 @media screen and (max-width: 780px) {
-    .navbar{
-        &__logo {
-            display: flex;
-            position: absolute;
-            top: 15px;
-            left: 35px;
-        }
-
-        &__nav-links {
-            display: none;
-        }
-
-        &__nav-links-mobile {
-            position: absolute;
-            display: block;
-            list-style: none;
-            background-color: $primaryColor;
-            left: 0;
-            top: 75px;
-            transition: all 0.5s ease-out;
-            width: 100%;
-        }
-
-        
-
-        &__mobile-menu-icon {
-            display: block;
-            position: absolute;
-            font-size: 30px;
-            color: white;
-            background-color: $primaryColor;
-            border: none;
-            outline: none;
-            top: 15px;
-            right: 25px;
-        }
+  .navbar {
+    &__logo {
+      display: flex;
+      position: absolute;
+      top: 15px;
+      left: 35px;
     }
-    .navbar li {
-            color: white;
-            text-align: center;
-            padding: 32px;
-            width: 100%;
-            transition: all 0.5s ease;
-        }
+
+    &__nav-links {
+      display: none;
+    }
+
+    &__nav-links-mobile {
+      position: absolute;
+      display: block;
+      list-style: none;
+      background-color: $primaryColor;
+      left: 0;
+      top: 75px;
+      transition: all 0.5s ease-out;
+      width: 100%;
+    }
+
+    &__mobile-menu-icon {
+      display: block;
+      position: absolute;
+      font-size: 30px;
+      color: white;
+      background-color: $primaryColor;
+      border: none;
+      outline: none;
+      top: 15px;
+      right: 25px;
+    }
+  }
+  .navbar li {
+    color: white;
+    text-align: center;
+    padding: 32px;
+    width: 100%;
+    transition: all 0.5s ease;
+  }
 }

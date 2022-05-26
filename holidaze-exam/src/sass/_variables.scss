@@ -1,17 +1,16 @@
 //colors
-$primaryColor: #1E195B;
-$secondaryColor: #5142F5;
-$tertiaryColor: #473EA8;
+$primaryColor: #1e195b;
+$secondaryColor: #5142f5;
+$tertiaryColor: #473ea8;
 $greyColor: rgba(0, 0, 0, 0.6);
 $inputGrey: rgba(196, 196, 196, 0.31);
 $warning: rgb(255, 0, 0);
 $fontGrey: rgba(34, 34, 34, 0.69);
 
-
 //font link
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap");
 
 //font
-$primaryFont:'Rowdies', cursive;
-$secondaryFont:'PT Sans Caption', sans-serif;
+$primaryFont: "Rowdies", cursive;
+$secondaryFont: "PT Sans Caption", sans-serif;

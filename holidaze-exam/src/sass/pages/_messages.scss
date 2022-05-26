@@ -1,66 +1,63 @@
 .messages {
-    h1{
-        font-size: 17px;
-        padding: 10px;
-        border-bottom: 2px solid rgb(233, 233, 233);
-    }
-    font-family: $secondaryFont;
-    font-size: 14px;
-.messages__card {
+  h1 {
+    font-size: 17px;
+    padding: 10px;
+    border-bottom: 2px solid rgb(233, 233, 233);
+  }
+  font-family: $secondaryFont;
+  font-size: 14px;
+  .messages__card {
     padding: 10px 25px;
     height: 70px;
-    border-bottom: 3px solid #5142F5;
+    border-bottom: 3px solid #5142f5;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
 
-  .messages__nametime {
-     display: grid;
-     grid-template-columns: 1fr 1fr;
-    .date{
+    .messages__nametime {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      .date {
         color: $secondaryColor;
-    }
+      }
     }
     .subject {
-        color: $secondaryColor;
-        font-weight: bold;
+      color: $secondaryColor;
+      font-weight: bold;
     }
-    .message{
-        color: $fontGrey;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        
+    .message {
+      color: $fontGrey;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
+  }
 }
 
+@media screen and (min-width: 781px) {
+  .messages {
+    display: grid;
+    grid-template-columns: 0.1fr 1fr;
+  }
+  .messages__card {
+    .messages__nametime {
+      .date {
+        display: flex;
+        justify-content: end;
+        padding-right: 50px;
+      }
+    }
+  }
 }
 
-@media screen and (min-width: 781px){
-    .messages {
-        display: grid;
-        grid-template-columns: 0.1fr 1fr;
-        
+@media screen and (min-width: 1280px) {
+  .messages__card {
+    padding: 10px 50px;
+    .message {
+      color: $fontGrey;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 150ch;
     }
-    .messages__card {
-       .messages__nametime {
-            .date  {
-                display: flex;
-                justify-content: end;
-                padding-right: 50px;
-        } }
-    }
-}
-
-@media screen and (min-width: 1280px){
-  
-    .messages__card {
-        padding: 10px 50px;
-        .message{
-            color: $fontGrey;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-width: 150ch;
-        }
-    }
+  }
 }

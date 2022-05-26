@@ -1,34 +1,32 @@
-
 .login {
-    width: 280px;
-    margin: auto;
-    padding: 25px 0 0 0;
+  width: 280px;
+  margin: auto;
+  padding: 25px 0 0 0;
 
-   h1 {
-        font-family: $primaryFont;
-        color: $secondaryColor;
-        font-weight: 700;
-    }
+  h1 {
+    font-family: $primaryFont;
+    color: $secondaryColor;
+    font-weight: 700;
+  }
 
-    p {
-        font-family: $secondaryFont;
-        font-size: 13px;
-        color: $greyColor;
-        margin: 4px 0 30px 0;
-    }
-    .pass {
-        margin-top: 17px;
-    }
- 
+  p {
+    font-family: $secondaryFont;
+    font-size: 13px;
+    color: $greyColor;
+    margin: 4px 0 30px 0;
+  }
+  .pass {
+    margin-top: 17px;
+  }
 }
 .login__image {
-    display: none;
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
-    .login {
-        padding: 70px 0;
-        margin: auto;
-        width: 335px;
-    }
+  .login {
+    padding: 70px 0;
+    margin: auto;
+    width: 335px;
+  }
 }

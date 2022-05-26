@@ -1,40 +1,39 @@
 .newEntry {
-   
-    form {
-        padding: 20px;
-        p {
-            color: $secondaryColor;
-            font-family: $secondaryFont;
-            margin: 5px 0;
-        }
-        input {
-            background-color: $inputGrey;
-            border: none;
-            height: 23px;
-            padding: 5px 10px 5px 10px;
-            width: 260px;
-        }
-        button {
-            @include longBtnPrimary;
-            width: 280px;
-            margin-top: 10px;
-        }
-
-        .description {
-            height: 100px;
-            resize: none;
-            width: 260px;
-            border: none;
-            background-color: $inputGrey;
-            padding: 5px 10px;
-            font-family: $secondaryFont;
-            font-size: 13px;
-        }
+  form {
+    padding: 20px;
+    p {
+      color: $secondaryColor;
+      font-family: $secondaryFont;
+      margin: 5px 0;
     }
+    input {
+      background-color: $inputGrey;
+      border: none;
+      height: 23px;
+      padding: 5px 10px 5px 10px;
+      width: 260px;
+    }
+    button {
+      @include longBtnPrimary;
+      width: 280px;
+      margin-top: 10px;
+    }
+
+    .description {
+      height: 100px;
+      resize: none;
+      width: 260px;
+      border: none;
+      background-color: $inputGrey;
+      padding: 5px 10px;
+      font-family: $secondaryFont;
+      font-size: 13px;
+    }
+  }
 }
 @media screen and (min-width: 780px) {
-    .entrygrid {
+  .entrygrid {
     display: grid;
     grid-template-columns: 0.1fr 1fr;
-}
+  }
 }
