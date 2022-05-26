@@ -1,38 +1,38 @@
 .filter {
-        .filter__input {
-        width: 275px; 
-        border: 2px solid $inputGrey;
-        border-radius: 3px;
-        margin: 10px 0 0 0;
-        padding: 5px;
+  .filter__input {
+    width: 275px;
+    border: 2px solid $inputGrey;
+    border-radius: 3px;
+    margin: 10px 0 0 0;
+    padding: 5px;
+  }
+  .dropdown__Card {
+    border: 1px solid $inputGrey;
+    width: 275px;
+    border-radius: 3px;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 0.1fr 1fr;
+    img {
+      width: 100px;
+      height: 92px;
+      margin: none;
     }
-    .dropdown__Card {
-        border: 1px solid $inputGrey;
-        width: 275px; 
-        border-radius: 3px;
-        padding: 5px;
-        display: grid;
-        grid-template-columns: 0.1fr 1fr;
-            img {
-                width: 100px;
-            height: 92px;
-            margin: none;
-        }
-        .drop__info {
-            font-family: $secondaryFont;
-            padding-left: 10px;
-            .drop__name {
-                font-weight: bold;
-            }
-            .drop__location {
-                color: $fontGrey;
-                font-size: 13px;
-            }
-            .drop__cost {
-                margin: 20px 0 0 0;
-                color: $secondaryColor;
-                font-weight: bold;
-            }
-        }
+    .drop__info {
+      font-family: $secondaryFont;
+      padding-left: 10px;
+      .drop__name {
+        font-weight: bold;
+      }
+      .drop__location {
+        color: $fontGrey;
+        font-size: 13px;
+      }
+      .drop__cost {
+        margin: 20px 0 0 0;
+        color: $secondaryColor;
+        font-weight: bold;
+      }
     }
+  }
 }

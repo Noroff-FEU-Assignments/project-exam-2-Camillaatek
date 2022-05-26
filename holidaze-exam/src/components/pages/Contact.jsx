@@ -3,8 +3,8 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneIcon from "@mui/icons-material/Phone";
 import MailIcon from "@mui/icons-material/Mail";
 import contact from "../../images/contact.png";
-import NavBar from "../navbar/NavBar"
-import Footer from "../Footer"
+import NavBar from "../navbar/NavBar";
+import Footer from "../Footer";
 import axios from "axios";
 import { CONTACT_URL } from "../../utils/Api";
 import ContactForm from "./contactForm";
@@ -18,13 +18,13 @@ const Contact = () => {
         subject: formData.subject,
         message: formData.message,
       },
-    }
-    const responseData = await axios.post(CONTACT_URL, options)
-    console.log(responseData)
-  }
+    };
+    const responseData = await axios.post(CONTACT_URL, options);
+    console.log(responseData);
+  };
   return (
     <>
-    <NavBar />
+      <NavBar />
       <div className="contact">
         <div className="contact__form">
           <h1>Fill in the form to contact us</h1>
@@ -32,8 +32,8 @@ const Contact = () => {
             Contact us directly or fill out the form and we will get back to you
             promptly!
           </p>
-        
-        <ContactForm sendContact={sendContact} />
+
+          <ContactForm sendContact={sendContact} />
         </div>
         <div className="contact__info">
           <div className="contact__img">
