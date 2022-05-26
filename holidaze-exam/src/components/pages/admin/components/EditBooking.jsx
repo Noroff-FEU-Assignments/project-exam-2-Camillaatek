@@ -32,8 +32,6 @@ const EditBooking = ({ booking, updateBooking }) => {
     alert("Booking has been updated");
   };
 
-  const onDelete = () => {};
-
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)}>

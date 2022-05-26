@@ -125,7 +125,7 @@ const Accommodations = () => {
       <NavBar />
       <div className="acc__page">
         <div className="acc__grid">
-          <p className="acc__search">Search</p>
+          <p className="acc__search">Find your dream vacation</p>
           <Dropdown
             bookings={searchItems}
             onChange={onChange}
@@ -159,15 +159,15 @@ const Accommodations = () => {
                       <p className="acc__info">
                         <div>
                           <PeopleAltIcon style={{ color: "#1E195B" }} />
-                          {item.attributes.bedroom} Bd.
+                          {item.attributes.guests} Gst.
                         </div>
                         <div>
                           <BedIcon style={{ color: "#1E195B" }} />
-                          {item.attributes.bedroom} Gs.
+                          {item.attributes.bedroom} Bdr.
                         </div>
                         <div>
                           <SquareFootIcon style={{ color: "#1E195B" }} />
-                          {item.attributes.bedroom} Sq.
+                          {item.attributes.square} Sqm.
                         </div>
                       </p>
                       <h2 className="acc__cost">

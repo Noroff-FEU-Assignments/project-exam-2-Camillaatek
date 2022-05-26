@@ -36,6 +36,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     color: $primaryColor;
+    font-size: 14px;
+  }
+  svg {
+    font-size: 14px;
   }
 
   img {
@@ -77,6 +81,7 @@
     width: 440px;
     height: 100vh;
     overflow-y: auto;
+    padding: 0 10px;
   }
 }
 

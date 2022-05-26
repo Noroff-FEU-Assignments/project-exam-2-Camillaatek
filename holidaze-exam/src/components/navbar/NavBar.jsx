@@ -8,6 +8,7 @@ import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
 import HotelIcon from "@mui/icons-material/Hotel";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import CallIcon from "@mui/icons-material/Call";
 
 const NavBar = () => {
   const [auth, setAuth] = useContext(AuthContext);
@@ -45,7 +46,7 @@ const NavBar = () => {
         </li>
         <li>
           <Link to={"/contact"} className="navbar__li">
-            <HomeIcon />
+            <CallIcon />
             Contact
           </Link>
         </li>

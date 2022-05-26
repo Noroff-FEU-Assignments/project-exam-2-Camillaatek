@@ -63,13 +63,17 @@ const Details = () => {
           <div className="details__grid__features">
             <h2>General features</h2>
             <p>
-              property type: <span>{details.category}</span>
+              Allowed Pets: <span>{details.pets ? "Yes" : "No"}</span>
             </p>
-            <p>Guests:</p>
+            <p>
+              Guests: <span>{details.guests}</span>
+            </p>
             <p>
               Bedrooms: <span>{details.bedroom}</span>
             </p>
-            <p>Square:</p>
+            <p>
+              Square: <span>{details.square}</span>
+            </p>
             <p>
               WIFI: <span>{details.wifi ? "Yes" : "No"}</span>
             </p>
