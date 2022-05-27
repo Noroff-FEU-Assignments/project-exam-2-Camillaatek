@@ -19,6 +19,9 @@ export const bookingSchema = yup.object().shape({
     .min(0, "Min value 0")
     .max(6, "Max value 6"),
   image_url: yup.string().required("Please enter the image URL"),
+  bedroom: yup.number().required("Please enter how many bedrooms"),
+  guests: yup.number().required("Please enter how many guests"),
+  square: yup.number().required("Please enter how many square meters"),
 });
 
 export const contactSchema = yup.object().shape({
