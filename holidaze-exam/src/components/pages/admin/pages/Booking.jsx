@@ -1,24 +1,24 @@
-import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
-import useAxios from "../../../../hooks/useAxios"
-import useToggle from "../../../../hooks/useToggle"
-import { BOOKINGS_PATH } from "../../../../utils/Api"
-import EditBooking from "../components/EditBooking"
-
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import useAxios from "../../../../hooks/useAxios";
+import useToggle from "../../../../hooks/useToggle";
+import { BOOKINGS_PATH } from "../../../../utils/Api";
+import Dashboard from "../components/Dashboard";
+import EditBooking from "../components/EditBooking";
 
 const AllHotels = () => {
-  const { id } = useParams()
-  const http = useAxios()
-  const [triggered, setTriggered] = useToggle()
-  const [booking, setBooking] = useState({})
+  const { id } = useParams();
+  const http = useAxios();
+  const [triggered, setTriggered] = useToggle();
+  const [booking, setBooking] = useState({});
 
   useEffect(() => {
     const fetchData = async () => {
-      const responseData = await http.get(`${BOOKINGS_PATH}/${id}`)
-      setBooking(responseData.data.data.attributes)
-    }
-    fetchData().catch(console.error)
-  }, [triggered])
+      const responseData = await http.get(`${BOOKINGS_PATH}/${id}`);
+      setBooking(responseData.data.data.attributes);
+    };
+    fetchData().catch(console.error);
+  }, [triggered]);
 
   const updateBooking = async (formData) => {
     const options = {
@@ -29,25 +29,26 @@ const AllHotels = () => {
         location: formData.location,
         rating: formData.rating,
         image_url: formData.image_url,
+        wifi: formData.wifi,
+        breakfast: formData.breakfast,
+        bedroom: formData.bedroom,
+        kitchen: formData.kitchen,
+        guests: formData.guests,
+        square: formData.square,
+        pet: formData.pet,
       },
-    }
-    const responseData = await http.put(`${BOOKINGS_PATH}/${id}`, options)
-    setTriggered()
-  }
+    };
+    const responseData = await http.put(`${BOOKINGS_PATH}/${id}`, options);
+    setTriggered();
+  };
 
   return (
-    <div>
-      <h1>{booking.name}</h1>
-      <h2>{booking.description}</h2>
-      <p>{booking.cost}</p>
-      <p>{booking.location}</p>
-      <p>{booking.rating}</p>
-      <p>{booking.image_url}</p>
+    <div className="entrygrid">
+      <Dashboard />
 
-      <h3>Edit:</h3>
       <EditBooking updateBooking={updateBooking} booking={booking} />
     </div>
-  )
-}
+  );
+};
 
-export default AllHotels
+export default AllHotels;

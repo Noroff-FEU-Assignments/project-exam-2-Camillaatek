@@ -21,6 +21,7 @@ const BookingsForm = ({ sendBooking }) => {
 
   return (
     <div className="newEntry">
+      <h1>Add new place</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <p>Name</p>
         <input {...register("name")} placeholder="Enter a Name.." />
