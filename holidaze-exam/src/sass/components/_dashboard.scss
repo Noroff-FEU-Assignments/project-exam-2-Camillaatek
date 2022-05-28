@@ -9,9 +9,22 @@
   align-items: center;
 
   gap: 2rem;
+  .dashboard__menulogo {
+    margin-top: 60px;
+  }
+  .dashboard__info {
+    margin-top: 160px;
+    text-align: center;
+    p {
+      color: white;
+    }
+    .dashboard__profile {
+      margin: auto;
+    }
+  }
 
   svg {
-    padding-right: 15px;
+    padding-right: 10px;
   }
   a {
     text-decoration: none;
@@ -22,8 +35,9 @@
     text-decoration: none;
     font-family: $secondaryFont;
     font-size: 15px;
-    margin-top: 30px;
+    margin-top: 50px;
     list-style-type: none;
+
     :active {
       background-color: grey;
       border-radius: 5px;
@@ -45,8 +59,12 @@
 
 @media screen and (max-width: 780px) {
   .dashboard {
-    height: 0;
+    color: blue;
+    height: 60px;
     width: 100vw;
+    .dashboard__menulogo {
+      margin-top: 0;
+    }
     &__logo {
       display: flex;
       position: absolute;
@@ -84,8 +102,15 @@
   .dashboard li {
     color: white;
     text-align: center;
-    padding: 32px;
+    padding: 10px;
     width: 100%;
     transition: all 0.5s ease;
+  }
+  .dashboard__info {
+    display: none;
+  }
+  .dashboard__newentryBtn {
+    max-width: 150px;
+    margin: auto;
   }
 }

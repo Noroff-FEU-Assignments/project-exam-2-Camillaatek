@@ -107,15 +107,14 @@ const Admin = () => {
             return (
               <div className="hotel__card" key={idx}>
                 <img src={item.attributes.image_url} alt="" />
-                <div className="hotel__title">
-                  <h2 className="hotel__name">{item.attributes.name}</h2>
-                  <h2 className="hotel__cost">{item.attributes.cost} Kr</h2>
-                </div>
+                <h2 className="hotel__name">{item.attributes.name}</h2>
+
                 <p className="hotel__location">{item.attributes.location}</p>
                 <p className="hotel__rating">
                   <StarIcon style={{ fontSize: 15, color: "#FFA800" }} />
                   {item.attributes.rating}
                 </p>
+                <h2 className="hotel__cost">{item.attributes.cost} Kr</h2>
                 <p className="hotel__info">
                   <div>
                     <KitchenIcon style={{ color: "#1E195B" }} />

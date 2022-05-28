@@ -34,42 +34,44 @@ const Dashboard = () => {
         }
         onClick={() => setIsMobile(false)}
       >
-        <Link to={"/newentry"} className="dashboard__li">
+        <Link to={"/newentry"} className="dashboard__link">
           <button className="dashboard__newentryBtn">Add New Entry</button>
         </Link>
         <li>
-          <Link to={"/messages"} className="dashboard__li">
+          <Link to={"/messages"} className="dashboard__link">
             <MessageIcon />
             Messages
           </Link>
         </li>
 
         <li>
-          <Link to={"/enquiries"} className="dashboard__li">
+          <Link to={"/enquiries"} className="dashboard__link">
             <PermContactCalendar />
             Enquiries
           </Link>
         </li>
         <li>
-          <Link to={"/admin"} className="dashboard__li">
+          <Link to={"/admin"} className="dashboard__link">
             <HotelIcon />
             Hotels
           </Link>
         </li>
         <li>
-          <Link to={"/"} className="dashboard__li">
+          <Link to={"/"} className="dashboard__link">
             <HomeIcon />
             Back to website
           </Link>
         </li>
         <div className="dashboard__info">
-          <Avatar />
+          <div className="dashboard__profile">
+            <Avatar />
+          </div>
           <p>{auth.user.username}</p>
           <p>{auth.user.email}</p>
         </div>
         <li>
           {!auth ? (
-            <Link to={"/login"} className="dashboard__li">
+            <Link to={"/login"} className="dashboard__link">
               <button className="dashboard__loginBtn">Login</button>
             </Link>
           ) : (

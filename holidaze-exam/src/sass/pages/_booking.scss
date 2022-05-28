@@ -4,7 +4,6 @@
   grid-template-columns: 0.1fr 1fr;
 
   &__page {
-    margin: 10px 10px;
     height: 100vh;
     overflow-y: auto;
   }
@@ -76,10 +75,7 @@
     &__page {
       margin: 0;
     }
-    &__title {
-      display: flex;
-      justify-content: space-between;
-    }
+
     &__list {
       margin: 0 20px;
     }
@@ -95,7 +91,6 @@
 @media screen and (min-width: 781px) {
   .hotel {
     &__page {
-      margin: 40px;
     }
     &__title {
       display: flex;
@@ -114,7 +109,6 @@
 @media screen and (min-width: 1280px) {
   .hotel {
     &__page {
-      margin: 40px 0 0 70px;
     }
   }
 }
