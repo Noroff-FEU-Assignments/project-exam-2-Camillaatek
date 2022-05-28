@@ -85,8 +85,7 @@ const Admin = () => {
         <Dashboard />
       </div>
       <div className="hotel__page">
-        <h1>Welcome {auth.user.username}</h1>
-        <h2>Boking list:</h2>
+        <h1>Booking list</h1>
         <div className="hotel__list">
           {bookings.map((item, idx) => {
             const deleteBooking = async () => {

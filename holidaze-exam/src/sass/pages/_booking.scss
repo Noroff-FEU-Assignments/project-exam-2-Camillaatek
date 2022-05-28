@@ -6,6 +6,11 @@
   &__page {
     height: 100vh;
     overflow-y: auto;
+    h1 {
+      font-size: 18px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+      padding: 10px;
+    }
   }
   &__list {
     display: flex;

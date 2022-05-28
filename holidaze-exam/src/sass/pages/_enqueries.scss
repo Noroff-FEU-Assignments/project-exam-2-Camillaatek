@@ -1,11 +1,11 @@
 .reservation {
   font-family: $secondaryFont;
   &__page {
-    margin: 5px;
+    margin: 0 5px 0 10px;
     h1 {
       font-size: 18px;
       border-bottom: 1px solid rgba(0, 0, 0, 0.09);
-      padding-bottom: 5px;
+      padding: 10px;
     }
     .reservation__title {
       display: grid;
@@ -43,5 +43,9 @@
   .reservation {
     display: grid;
     grid-template-columns: 0.1fr 1fr;
+  }
+  .reservation__page {
+    height: 100vh;
+    overflow-y: auto;
   }
 }

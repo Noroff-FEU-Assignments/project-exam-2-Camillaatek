@@ -37,6 +37,10 @@
   .messages {
     display: grid;
     grid-template-columns: 0.1fr 1fr;
+    .messages__page {
+      height: 100vh;
+      overflow-y: auto;
+    }
   }
   .messages__card {
     .messages__nametime {
