@@ -80,7 +80,7 @@ class SimpleMap extends Component {
             lng={5.319785702374072}
             text="Bergen Kino"
             img={
-              "https://a0.muscache.com/im/pictures/prohost-api/Hosting-48509375/original/0862735b-4abc-4d87-a8d1-f2fb6053adc8.jpeg?im_w=720"
+              "https://maps.googleapis.com/maps/api/place/js/PhotoService.GetPhoto?1sAap_uECBgTKjRqeqw6T_n7_FuOr0BnOYXaUSyN9Lns89GV6-t8YqzMtB4-qYVGNE6IXEoUnjhiVT87toQJY2zdKCsfzjK54GQfk0jR-1ft2SzNd168H6u4hGp8cBhPJm6fs3o1K_oJuKwAm7fcoLkUgLplNAztfU9BpsP870efv9yy6KNlN3&3u200&4u200&5m1&2e1&callback=none&key=AIzaSyCW-UFnj12hl_Cs_iVsNKIxzysP_5J1INc&token=71640"
             }
             star="234"
           />
@@ -89,7 +89,7 @@ class SimpleMap extends Component {
             lng={5.343164465398466}
             text="Fløyen"
             img={
-              "https://a0.muscache.com/im/pictures/prohost-api/Hosting-48509375/original/0862735b-4abc-4d87-a8d1-f2fb6053adc8.jpeg?im_w=720"
+              "https://maps.googleapis.com/maps/api/place/js/PhotoService.GetPhoto?1sAap_uEDMgLT56K1dRRfwrg0PSTu_frIZw1iCw0RlhY1HsPAPMj9yei1sTVkDCGciyPHRteMS8C9y0hduNRDVgxr6L2MVlOzGNMF1WNKaFDG3KoVQotgMtxNJxIaxDB6N4RBPBgD4PF-zSJhk-0fveKX_tVQYptKKPDLDyfCm9d_se-RJPUUU&3u200&4u200&5m1&2e1&callback=none&key=AIzaSyCW-UFnj12hl_Cs_iVsNKIxzysP_5J1INc&token=3193"
             }
             star="234"
           />
@@ -98,7 +98,7 @@ class SimpleMap extends Component {
             lng={5.304184786893092}
             text="Akvariet"
             img={
-              "https://a0.muscache.com/im/pictures/prohost-api/Hosting-48509375/original/0862735b-4abc-4d87-a8d1-f2fb6053adc8.jpeg?im_w=720"
+              "https://maps.googleapis.com/maps/api/place/js/PhotoService.GetPhoto?1sAap_uEBtuIM6Mq2z9ZEsHWZ9gYaAVypgKfG2bEZLZK9NI3mi8FJhAzh0o6BksnbF6k0DhTkUeJmeL0S46liebBgncGb5mKNEBnjdPrgtgRFCx9fM0HH9zFLAUO-JNXFZ68aaokGPccLiYierwZ4gbd0RgCnlpnLyVvbB8P4cTjrM-PDIoD25&3u200&4u200&5m1&2e1&callback=none&key=AIzaSyCW-UFnj12hl_Cs_iVsNKIxzysP_5J1INc&token=35400"
             }
             star="234"
           />
@@ -107,7 +107,7 @@ class SimpleMap extends Component {
             lng={5.324917692379362}
             text="Galleriet"
             img={
-              "https://a0.muscache.com/im/pictures/prohost-api/Hosting-48509375/original/0862735b-4abc-4d87-a8d1-f2fb6053adc8.jpeg?im_w=720"
+              "https://maps.googleapis.com/maps/api/place/js/PhotoService.GetPhoto?1sAap_uEBE6BvZqrqvnp05utujv0P52sHCbNG6oNe4cS3k-KjArln5dK6RuQl5NS0W7UYSGXFPj_eUU2VwVOSrCvI_A6Vqh1CIMVsIYdStoq3En87Yn9OiVaJ5OS9M-5lqp0ybk_1X1bCbjJ3jmu0do-OmRnQlV10R002vJmV9e_jhnbVPWxNO&3u200&4u200&5m1&2e1&callback=none&key=AIzaSyCW-UFnj12hl_Cs_iVsNKIxzysP_5J1INc&token=51905"
             }
             star="234"
           />
@@ -116,7 +116,7 @@ class SimpleMap extends Component {
             lng={5.324294795877084}
             text="Bryggen"
             img={
-              "https://a0.muscache.com/im/pictures/prohost-api/Hosting-48509375/original/0862735b-4abc-4d87-a8d1-f2fb6053adc8.jpeg?im_w=720"
+              "https://maps.googleapis.com/maps/api/place/js/PhotoService.GetPhoto?1sAap_uEBP1dN-xSpKbr10lBfCpd-ad2Z3PWygwb0emTIGza5CiKeHUPTbYX1qDskfBxEH7_cGwmRgX3qSnJRmNf57bczrPXx5yI-6Vi-HnGxU3Hqkmnry50tdlbldRFSAlEcXUbykRAaMDkIzYMxXcWpoeBikxGBSernDkwHpVKDsE1cGYZrU&3u200&4u200&5m1&2e1&callback=none&key=AIzaSyCW-UFnj12hl_Cs_iVsNKIxzysP_5J1INc&token=83831"
             }
             star="234"
           />
