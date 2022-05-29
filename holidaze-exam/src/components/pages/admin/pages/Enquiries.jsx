@@ -47,7 +47,7 @@ const Enquiries = () => {
         </div>
         {reservations.map((item, idx) => {
           return (
-            <div className="reservation__card">
+            <div className="reservation__card" key={item.id}>
               <div className="reservation__info">
                 <div className="name">
                   <p>{item.attributes.name}</p>

@@ -133,13 +133,14 @@ const Accommodations = () => {
           />
 
           <div className="acc__list">
-            {bookings.map((item, idx) => {
+            {bookings.map((item) => {
               return (
                 <Link
+                  key={item.id}
                   to={`/details/${item.id}`}
                   style={{ color: "inherit", textDecoration: "inherit" }}
                 >
-                  <div className="acc__card" key={idx}>
+                  <div className="acc__card" key={item.id}>
                     <img src={item.attributes.image_url} alt="" />
                     <div className="acc__info__grid">
                       <div className="acc__title">
@@ -149,14 +150,14 @@ const Accommodations = () => {
                         <p className="acc__location">
                           {item.attributes.location}
                         </p>
-                        <p className="acc__rating">
+                        <div className="acc__rating">
                           <StarIcon
                             style={{ fontSize: 15, color: "#FFA800" }}
                           />
                           {item.attributes.rating}
-                        </p>
+                        </div>
                       </div>
-                      <p className="acc__info">
+                      <div className="acc__info">
                         <div>
                           <PeopleAltIcon style={{ color: "#1E195B" }} />
                           {item.attributes.guests} Gst.
@@ -169,7 +170,7 @@ const Accommodations = () => {
                           <SquareFootIcon style={{ color: "#1E195B" }} />
                           {item.attributes.square} Sqm.
                         </div>
-                      </p>
+                      </div>
                       <h2 className="acc__cost">
                         {item.attributes.cost} Kr / Night
                       </h2>

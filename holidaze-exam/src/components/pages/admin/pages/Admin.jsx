@@ -114,7 +114,7 @@ const Admin = () => {
                   {item.attributes.rating}
                 </p>
                 <h2 className="hotel__cost">{item.attributes.cost} Kr</h2>
-                <p className="hotel__info">
+                <div className="hotel__info">
                   <div>
                     <KitchenIcon style={{ color: "#1E195B" }} />
                     {item.attributes.bedroom} Bd.
@@ -127,7 +127,7 @@ const Admin = () => {
                     <BedIcon style={{ color: "#1E195B" }} />
                     {item.attributes.bedroom} Sq.
                   </div>
-                </p>
+                </div>
                 <Link to={`/booking/${item.id}`}>
                   <button className="hotel__edit">EDIT</button>
                 </Link>
