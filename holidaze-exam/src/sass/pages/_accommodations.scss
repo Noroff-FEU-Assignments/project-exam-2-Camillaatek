@@ -47,11 +47,11 @@
     width: 290px;
   }
 }
-.testing {
+.acc__map {
   display: none;
 }
 @media screen and (min-width: 781px) {
-  .testing {
+  .acc__map {
     display: flex;
   }
   .acc__page {
@@ -94,3 +94,28 @@
 // @media screen and (min-width: 1280px) {
 
 // }
+.map__card {
+  background-color: white;
+  border-radius: 3px;
+  width: 120px;
+  height: 140px;
+  p {
+    font-family: $secondaryFont;
+    color: $fontGrey;
+    padding: 5px;
+  }
+  .map__img {
+    width: 100px;
+    height: 80px;
+    padding: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+  .map__review {
+    padding: 5px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}

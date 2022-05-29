@@ -181,7 +181,7 @@ const Accommodations = () => {
           </div>
         </div>
 
-        <section className="testing">
+        <section className="acc__map">
           <SimpleMap />
         </section>
       </div>

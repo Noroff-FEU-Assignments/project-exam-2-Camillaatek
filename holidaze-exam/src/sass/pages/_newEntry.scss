@@ -1,4 +1,10 @@
 .newEntry {
+  h1 {
+    font-size: 18px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+    padding: 10px;
+    font-family: $secondaryFont;
+  }
   form {
     padding: 20px;
     p {
