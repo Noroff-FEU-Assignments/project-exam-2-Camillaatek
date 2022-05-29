@@ -125,7 +125,7 @@ class SimpleMap extends Component {
             lng={5.3295122135338024}
             text="VilVite Vitensenter"
             img={
-              "https://a0.muscache.com/im/pictures/prohost-api/Hosting-48509375/original/0862735b-4abc-4d87-a8d1-f2fb6053adc8.jpeg?im_w=720"
+              "https://maps.googleapis.com/maps/api/place/js/PhotoService.GetPhoto?1sAap_uEB-FMoI1j_YYPg-N4MQHRspYooeodXnp7jHd0BN-IQPI-9c42hAD9zhUWHX03R2nkSWJ2rU7OEzP3F6GKKz61lx3KKoFkcS4DY-sHZAx8bTEAVpoM5DGqe13dK5ADLW9sTpJnwtdW1ic92JstGNA7xhNBkDZn2aMe-ioGhClP045_Pi&3u200&4u200&5m1&2e1&callback=none&key=AIzaSyCW-UFnj12hl_Cs_iVsNKIxzysP_5J1INc&token=65703"
             }
             star="234"
           />
