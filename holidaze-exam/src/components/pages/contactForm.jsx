@@ -12,8 +12,6 @@ const ContactForm = ({ sendContact }) => {
     resolver: yupResolver(contactSchema),
   });
   const onSubmit = (formData) => {
-    console.log("FormData:", formData);
-
     sendContact(formData).catch(console.error);
     alert("your message has been sent!");
   };

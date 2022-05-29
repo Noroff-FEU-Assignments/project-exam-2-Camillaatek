@@ -20,7 +20,6 @@ const Contact = () => {
       },
     };
     const responseData = await axios.post(CONTACT_URL, options);
-    console.log(responseData);
   };
   return (
     <>

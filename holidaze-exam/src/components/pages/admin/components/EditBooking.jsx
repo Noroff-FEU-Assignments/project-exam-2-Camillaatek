@@ -29,12 +29,10 @@ const EditBooking = ({ booking, updateBooking }) => {
   });
 
   useEffect(() => {
-    console.log("Reset");
     reset(booking);
   }, [booking]);
 
   const onSubmit = (formData) => {
-    console.log("Form Data:", formData);
     updateBooking(formData).catch(console.error);
     alert("Booking has been updated");
   };

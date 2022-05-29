@@ -35,7 +35,6 @@ const Details = () => {
       },
     };
     const fetchData = await axios.post(RESERVATION_URL, options);
-    console.log(fetchData);
   };
   return (
     <>

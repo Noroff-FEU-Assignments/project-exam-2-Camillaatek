@@ -12,7 +12,6 @@ const ReservationForm = ({ sendReservation }) => {
   });
 
   const onSubmit = (formData) => {
-    console.log("formData: ", formData);
     sendReservation(formData).catch(console.error);
     alert("your reservation has been made!");
   };
