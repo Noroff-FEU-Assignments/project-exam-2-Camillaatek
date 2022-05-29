@@ -1,9 +1,16 @@
 .home {
-  margin: 20px;
+  padding: 10px;
   .home__frontpic {
     width: 100%;
-    height: 600px;
+    height: 500px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 5px;
+  }
+  button {
+    @include loginOutBtn;
+  }
+  .home__grid {
+    display: flex;
+    justify-content: center;
   }
 }

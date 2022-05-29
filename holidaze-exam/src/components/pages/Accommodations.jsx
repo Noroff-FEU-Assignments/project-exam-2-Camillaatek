@@ -63,19 +63,16 @@
 // export default Accommodations
 
 import StarIcon from "@mui/icons-material/Star";
-import KitchenIcon from "@mui/icons-material/Kitchen";
 import BedIcon from "@mui/icons-material/Bed";
 import useToggle from "../../hooks/useToggle";
 import { useEffect, useState } from "react";
 import useAxios from "../../hooks/useAxios";
 import { BOOKINGS_PATH } from "../../utils/Api";
 import { Link } from "react-router-dom";
-import Dashboard from "./admin/components/Dashboard";
 import NavBar from "../navbar/NavBar";
 import SquareFootIcon from "@mui/icons-material/SquareFoot";
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import Dropdown from "../Dropdown";
-import { GoogleMapReact } from "google-map-react";
 import SimpleMap from "./Map";
 
 const Accommodations = () => {
@@ -191,5 +188,3 @@ const Accommodations = () => {
 };
 
 export default Accommodations;
-
-// export default Accomodations

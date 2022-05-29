@@ -1,6 +1,5 @@
 import React from "react";
 import LoginForm from "../LoginForm";
-import undraw from "../../images/undraw.png";
 import NavBar from "../navbar/NavBar";
 import Footer from "../Footer";
 

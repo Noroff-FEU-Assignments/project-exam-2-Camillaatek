@@ -6,7 +6,6 @@ import { RESERVATION_URL } from "../../../../utils/Api";
 import { reservationSchema } from "../../../../utils/yupSchemas";
 import Dashboard from "../components/Dashboard";
 import { format } from "fecha";
-import Popup from "../components/PopUp";
 
 const Enquiries = () => {
   const [isTriggered, setIsTriggered] = useToggle();
@@ -43,7 +42,6 @@ const Enquiries = () => {
           <p>Guests</p>
           <p>Check-In</p>
           <p>Check-Out</p>
-          <p>Note</p>
         </div>
         {reservations.map((item, idx) => {
           return (
@@ -60,11 +58,6 @@ const Enquiries = () => {
                 <p>
                   {format(new Date(item.attributes.checkout), "Do MMMM HH:MM")}
                 </p>
-
-                <button onClick={() => setButtonPopup(true)}>Open</button>
-                <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-                  <p>{item.attributes.note}</p>
-                </Popup>
               </div>
             </div>
           );

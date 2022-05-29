@@ -87,16 +87,6 @@ const Details = () => {
         </div>
         <ReservationForm sendReservation={sendReservation} />
       </div>
-      {/* <iframe
-
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9933.699268278275!2d5.308873834995961!3d60.39409731176001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x463cfc10943e35e9%3A0x471276c8da9f7ceb!2sAkvariet%20i%20Bergen!5e0!3m2!1sno!2sno!4v1653673023739!5m2!1sno!2sno"
-        width="600"
-        height="450"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe> */}
       <Footer />
     </>
   );

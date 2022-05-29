@@ -4,7 +4,6 @@ import AuthContext from "../../../../context/AuthContext";
 import useAxios from "../../../../hooks/useAxios";
 import useToggle from "../../../../hooks/useToggle";
 import { CONTACT_PATH } from "../../../../utils/Api";
-import BookingsForm from "../components/BookingsForm";
 import Dashboard from "../components/Dashboard";
 import { format } from "fecha";
 

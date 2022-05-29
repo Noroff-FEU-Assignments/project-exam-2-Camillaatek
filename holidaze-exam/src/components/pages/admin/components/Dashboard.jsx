@@ -63,9 +63,6 @@ const Dashboard = () => {
           </Link>
         </li>
         <div className="dashboard__info">
-          <div className="dashboard__profile">
-            <Avatar />
-          </div>
           <p>{auth.user.username}</p>
           <p>{auth.user.email}</p>
         </div>
