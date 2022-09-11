@@ -3,13 +3,14 @@ password: Test123123
 
 # Project-Exam-2
 
-![holidaze](https://user-images.githubusercontent.com/69843303/173090594-4e1e6261-dfbe-47a6-9393-d9b069734e1e.JPG)
+![holidaze](https://user-images.githubusercontent.com/69843303/189531258-f4887f55-6a77-4d58-b849-644c5f0fa47c.JPG)
 
 To take the skills learned over the last two years and take on an extensive project where the finished product should reflect the candidate's general development capabilities, in addition to visual and technical skills.
 
 ## Description
 
 ### Visitor Side
+
 
 - Homepage
 - Search bar typeahead (auto dropdown with hotel names that match what has been typed)
