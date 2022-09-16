@@ -1,6 +1,3 @@
-username: admin@admin.com / ca@ca.com
-password: Test123123
-
 # Project-Exam-2
 
 ![holidaze](https://user-images.githubusercontent.com/69843303/189531258-f4887f55-6a77-4d58-b849-644c5f0fa47c.JPG)
